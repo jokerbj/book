@@ -15,11 +15,11 @@ install:
     - gitbook install  
 	
 branches:
-  only:
-    - save  # 只监测save分支，可根据自己情况设置
+    only:
+        - save  # 只监测save分支，可根据自己情况设置
 env:
- global:
-   - GH_REF: github.com/jokerbj/book.git  #设置GH_REF
+    global:
+        - GH_REF: github.com/jokerbj/book.git  #设置GH_REF
 	
 script:
     - gitbook init
