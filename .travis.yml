@@ -9,10 +9,10 @@ cache:
 before_install:
     - export TZ='Asia/Shanghai' # 更改时区
     - npm install -g gitbook@3.2.3
-	- npm install -g gitbook-cli@2.3.2
+    - npm install -g gitbook-cli@2.3.2
 
 install:
-	- gitbook install  # 安装插件
+    - gitbook install  
 	
 branches:
   only:
@@ -22,6 +22,6 @@ env:
    - GH_REF: github.com/jokerbj/book.git  #设置GH_REF
 	
 script:
-	- git init         # 生成目录
-	- gitbook build    # 构建HTML
-	- bash deploy.sh   # 部署发布
+    - gitbook init
+    - gitbook build
+    - bash deploy.sh
