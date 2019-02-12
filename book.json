@@ -1,0 +1,68 @@
+{
+    "title": "Joker's book",
+    "author": "Joker",
+    "description": "linux python",
+    "language": "zh-hans",
+    "gitbook": "3.2.3",
+    "styles": {
+        "website": "./styles/website.css",
+		"ebook": "./styles/ebook.css",
+		"pdf": "./styles/pdf.css",
+		"mobi": "./styles/mobi.css",
+		"epub": "./styles/epub.css"
+    },
+    "structure": {
+        "readme": "README.md",
+		"summary":"SUMMARY.md"
+    },
+    "links": {
+        "sidebar": {
+            "CNBLOG博客地址": "https://www.cnblogs.com/jokerbj/"
+        }
+    },
+    "plugins": [
+		"highlight",
+		"search",
+		"-sharing",
+		"fontsettings",
+		"livereload",
+		"splitter",
+		"anchor-navigation-ex",
+        "github",
+		"tbfed-pagefooter",
+		"-multipart",
+		"theme-comscore",
+		"toggle-chapters",
+		"advanced-emoji",
+		"favicon"
+    ],
+    "pluginsConfig": {
+		"theme-default": {
+			"showLevel": false
+		},
+        "github": {
+            "url": "https://github.com/jokerbj/"
+        },
+		"tbfed-pagefooter": {
+			"copyright": "FROM JOKER",
+			"modify_label": "该文件修订时间：",
+			"modify_format": "YYYY-MM-DD HH:mm:ss"
+		},
+		"sharing": {
+            "google": null,
+            "facebook": null,
+            "twitter": null,
+            "weibo": null,
+            "all": null
+        },
+		"favicon":{
+            "shortcut": "./source/images/favicon.jpg",
+            "bookmark": "./source/images/favicon.jpg",
+            "appleTouch": "./source/images/apple-touch-icon.jpg",
+            "appleTouchMore": {
+                "120x120": "./source/images/apple-touch-icon.jpg",
+                "180x180": "./source/images/apple-touch-icon.jpg"
+            }
+		}
+    }
+}
