@@ -56,8 +56,8 @@
             "all": null
         },
 		"favicon":{
-            "shortcut": "./gitbook/images/favicon.jpg",
-            "bookmark": "./gitbook/images/favicon.jpg",
+            "shortcut": "./gitbook/images/favicon.ico",
+            "bookmark": "./gitbook/images/favicon.ico",
             "appleTouch": "./gitbook/images/apple-touch-icon.jpg",
             "appleTouchMore": {
                 "120x120": "./gitbook/images/apple-touch-icon.jpg",
