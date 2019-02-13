@@ -5,11 +5,11 @@
     "language": "zh-hans",
     "gitbook": "3.2.3",
     "styles": {
-        "website": "./styles/website.css",
-		"ebook": "./styles/ebook.css",
-		"pdf": "./styles/pdf.css",
-		"mobi": "./styles/mobi.css",
-		"epub": "./styles/epub.css"
+        "website": "styles/website.css",
+		"ebook": "styles/ebook.css",
+		"pdf": "styles/pdf.css",
+		"mobi": "styles/mobi.css",
+		"epub": "styles/epub.css"
     },
     "structure": {
         "readme": "README.md",
@@ -25,7 +25,7 @@
 		"search",
 		"-sharing",
 		"fontsettings",
-		"livereload",
+		"-livereload",
 		"splitter",
 		"anchor-navigation-ex",
         "github",
@@ -34,7 +34,8 @@
 		"theme-comscore",
 		"toggle-chapters",
 		"advanced-emoji",
-		"favicon"
+		"favicon",
+		"emphasize"
     ],
     "pluginsConfig": {
 		"theme-default": {
