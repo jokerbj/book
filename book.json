@@ -41,13 +41,6 @@
 			"modify_label": "该文件修订时间：",
 			"modify_format": "YYYY-MM-DD HH:mm:ss"
 		},
-		"sharing": {
-            "google": null,
-            "facebook": null,
-            "twitter": null,
-            "weibo": null,
-            "all": null
-        },
 		"favicon":{
             "shortcut": "./gitbook/images/favicon.ico",
             "bookmark": "./gitbook/images/favicon.ico",
