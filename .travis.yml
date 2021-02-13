@@ -8,8 +8,9 @@ cache:
 
 before_install:
     - export TZ='Asia/Shanghai' # 更改时区
-    - npm install -g gitbook@3.2.3
     - npm install -g gitbook-cli@2.3.2
+    - npm install -g gitbook@3.2.3
+    
 
 install:
     - gitbook install   # 安装插件
