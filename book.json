@@ -1,6 +1,6 @@
 {
-    "title": "Joker's book",
-    "author": "Joker",
+    "title": "liqianlong's book",
+    "author": "李乾龙",
     "description": "linux python",
     "language": "zh-hans",
     "gitbook": "3.2.3",
@@ -17,7 +17,7 @@
     },
     "links": {
         "sidebar": {
-            "CNBLOG博客地址": "https://www.cnblogs.com/jokerbj/"
+            "博客园地址": "https://www.cnblogs.com/jokerbj/"
         }
     },
     "plugins": [
@@ -41,11 +41,11 @@
 		"theme-default": {
 			"showLevel": false
 		},
-        "github": {
-            "url": "https://github.com/jokerbj/"
-        },
+        #"github": {
+        #    "url": "https://github.com/jokerbj/"
+        #},
 		"tbfed-pagefooter": {
-			"copyright": "FROM JOKER",
+			"copyright": "FROM liqianlong",
 			"modify_label": "该文件修订时间：",
 			"modify_format": "YYYY-MM-DD HH:mm:ss"
 		},
