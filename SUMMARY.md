@@ -1,6 +1,6 @@
 # Summary
 
-* [introduction](README.md)
+* [关于作者](README.md)
 
 -----
 * [LINUX](./linux/README.md)
