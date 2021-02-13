@@ -21,6 +21,7 @@
         }
     },
     "plugins": [
+        "-sharing",
         "highlight",
         "search",
         "anchor-navigation-ex",
