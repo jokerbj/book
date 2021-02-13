@@ -24,26 +24,26 @@
 		"highlight",
 		"search",
 		"-sharing",
-		"fontsettings",
+		"-fontsettings",
 		"-livereload",
-		"splitter",
-		"anchor-navigation-ex",
-        "github",
+		"-splitter",
+		"anchor-navigation-ex",//右侧锚点，A背景
+        "-github",
 		"tbfed-pagefooter",
 		"-multipart",
-		"theme-comscore",
+		"theme-comscore", //这是一个使用comScore配色方案的Gitbook插件。
 		"toggle-chapters",
-		"advanced-emoji",
+		"-advanced-emoji",
 		"favicon",
-		"emphasize"
+		"-emphasize"
     ],
     "pluginsConfig": {
 		"theme-default": {
 			"showLevel": false
 		},
-        #"github": {
-        #    "url": "https://github.com/jokerbj/"
-        #},
+        "github": {
+            "url": "https://github.com/jokerbj/"
+        },
 		"tbfed-pagefooter": {
 			"copyright": "FROM liqianlong",
 			"modify_label": "该文件修订时间：",
