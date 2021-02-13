@@ -21,7 +21,7 @@
         }
     },
     "plugins": [
-        "-expandable-chapters",
+        "expandable-chapters",
         "-sharing",
         "highlight",
         "search",
