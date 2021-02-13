@@ -21,7 +21,7 @@
         }
     },
     "plugins": [
-		"highlight",//使用语言自动检测突出显示语法
+		"highlight",
 		"search",//在您的gitbook中搜索
 		"-sharing",
 		"-fontsettings",
