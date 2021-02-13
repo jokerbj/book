@@ -21,21 +21,13 @@
         }
     },
     "plugins": [
-		"highlight",
-		"search",//在您的gitbook中搜索
-		"-sharing",
-		"-fontsettings",
-		"-livereload",
-		"-splitter",
-		"anchor-navigation-ex",//右侧锚点，A背景
-        "-github",
-		"tbfed-pagefooter",//定制每篇文章的页脚，可以添加版权和显示文件修改时间
-		"-multipart",
-		"theme-comscore", //这是一个使用comScore配色方案的Gitbook插件。
-		"toggle-chapters",//切换GitBook上的章节
-		"-advanced-emoji",
-		"favicon",
-		"-emphasize"//将favicon添加到gitbook站点
+        "highlight",
+        "search",
+        "anchor-navigation-ex",
+        "tbfed-pagefooter",
+        "theme-comscore",
+        "toggle-chapters",
+        "favicon",
     ],
     "pluginsConfig": {
 		"theme-default": {
