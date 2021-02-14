@@ -21,23 +21,13 @@
         }
     },
     "plugins": [
-        "expandable-chapters",
-        "-sharing",
+        "splitter",
         "highlight",
         "search",
-        "anchor-navigation-ex",
         "tbfed-pagefooter",
-        "theme-comscore",
-        "toggle-chapters",
         "favicon"
     ],
     "pluginsConfig": {
-		"theme-default": {
-			"showLevel": false
-		},
-        "github": {
-            "url": "https://github.com/jokerbj/"
-        },
 		"tbfed-pagefooter": {
 			"copyright": "FROM liqianlong",
 			"modify_label": "该文件修订时间：",
