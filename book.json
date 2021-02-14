@@ -15,11 +15,6 @@
         "readme": "README.md",
 		"summary":"SUMMARY.md"
     },
-    "links": {
-        "sidebar": {
-            "作者首页": "https://www.liqianlong.cn"
-        }
-    },
     "plugins": [
         "-sharing",
         "splitter",
