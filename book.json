@@ -21,10 +21,12 @@
         }
     },
     "plugins": [
+        "-sharing",
         "splitter",
         "highlight",
         "search",
         "tbfed-pagefooter",
+        "anchor-navigation-ex",
         "favicon"
     ],
     "pluginsConfig": {
