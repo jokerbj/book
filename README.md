@@ -17,3 +17,9 @@
 
 - GITBOOK开发与维护人员
 - https://www.gitbook.com/
+
+## 本书如何生成
+
+如有疑问参考`联系&交流`
+- https://www.cnblogs.com/jokerbj/p/8601603.html
+- https://segmentfault.com/a/1190000019806829
