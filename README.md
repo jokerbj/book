@@ -20,6 +20,5 @@
 
 ## 本书如何生成
 
-如有疑问参考`联系&交流`
+下面介绍了gitbook，以及github如何关联travis，travis又部署到github
 - https://www.cnblogs.com/jokerbj/p/8601603.html
-- https://segmentfault.com/a/1190000019806829
