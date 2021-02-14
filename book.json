@@ -17,7 +17,7 @@
     },
     "links": {
         "sidebar": {
-            "博客园地址": "https://www.cnblogs.com/jokerbj/"
+            "博客园": "https://www.cnblogs.com/jokerbj/"
         }
     },
     "plugins": [
@@ -28,9 +28,14 @@
         "tbfed-pagefooter",
         "anchor-navigation-ex",
         "hide-element",
+        "copy-code-button",
+        "3-ba",
         "favicon"
     ],
     "pluginsConfig": {
+        "3-ba": {
+            "token": "a966d180803ca8cd07c967d6fdfb8d3f"
+        },
         "hide-element": {
             "elements": [".gitbook-link"]
         },
