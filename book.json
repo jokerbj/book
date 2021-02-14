@@ -17,7 +17,7 @@
     },
     "links": {
         "sidebar": {
-            "博客园": "https://www.cnblogs.com/jokerbj/"
+            "作者首页": "https://www.liqianlong.cn"
         }
     },
     "plugins": [
@@ -27,7 +27,7 @@
         "search",
         "tbfed-pagefooter",
         "anchor-navigation-ex",
-        "hide-element",
+        "-hide-element",
         "copy-code-button",
         "3-ba",
         "favicon"
