@@ -1,0 +1,173 @@
+
+8805d37b7e26028819d3f95ffdbdcca3ed6abc5f
+
+在sonar里面加入了host，token所以简单手动质检
+
+
+  sonar-scanner \
+  -Dsonar.projectKey=html \
+  -Dsonar.sources=. 
+  -Dsonar.language=java
+
+  sonar-scanner \
+  -Dsonar.projectKey=java \
+  -Dsonar.sources=. \
+  -Dsonar.language=java
+
+
+
+mvn sonar:sonar \
+  -Dsonar.host.url=http://172.17.44.127:9000 \
+  -Dsonar.login=8805d37b7e26028819d3f95ffdbdcca3ed6abc5f
+
+
+sonar-scanner \
+sonar.projectKey=demo
+sonar.projectName=demo
+sonar.projectVersion=1.0
+sonar.sources=./
+sonar.language=java
+sonar.sourceEncoding=UTF-8
+
+
+集成钉钉
+
+https://oapi.dingtalk.com/robot/send?access_token=
+b9cc4a4774f94c9ab5c43bc2125956ae0494e919571774d5c5b97aa489e0c85b
+
+
+
+
+pipeline {
+	agent any
+	stages {
+		stage('拉取代码'){
+			steps {
+				checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'ff2a96dc-73f6-43c1-ba91-a43c8199dfce', url: 'ssh://git@gitlab-ops.tuji.com:33899/root/diaoge.git']]])
+			}
+		}
+		stage('代码质检'){
+			steps {
+				withSonarQubeEnv('SonarQube'){
+					sh 'sonar-scanner -Dsonar.projectKey=html2 -Dsonar.projectName=${JOB_NAME} -Dsonar.sources=.'
+				}
+				script{
+					timeout(1)
+					def qg=waitForQualityGate()
+					if (qg.status != 'ok'){
+						error "未通过质检"
+					}
+				}
+			}
+		}
+		stage('代码构建'){
+			steps {
+				echo "build code is ok"
+			}
+		}
+		stage('代码部署'){
+			steps {
+				echo "deploy code is ok"
+			}
+		}
+	}
+	post {
+		failure {
+			dingtalk (
+			    robot: '9a31da03-80b7-4944-b985-c215ce896bb6',
+			    type: 'TEXT',
+			    at: [],
+			    atAll: false,
+			    title: '',
+			    text: [${JOB_NAME}构建失败],
+			    messageUrl: '',
+			    picUrl: '',
+			    singleTitle: '',
+			    btns: [],
+			    btnLayout: 'H',
+			    hideAvatar: false
+			)
+		}
+	}
+}
+
+
+
+b9cc4a4774f94c9ab5c43bc2125956ae0494e919571774d5c5b97aa489e0c85b
+
+
+http://172.17.44.127:9000/sonarqube/dashboard?id=pipelin-1
+
+
+
+
+
+
+
+
+
+
+script {
+	timeout(1) { //一分钟   
+    	//利用sonar webhook功能通知pipeline代码检测结果，未通过质量阈，pipeline将会fail
+    	def qg = waitForQualityGate() 
+    	if (qg.status != 'OK') {
+        	error "未通过Sonarqube的代码质量阈检查，请及时修改！failure: ${qg.status}"
+    	}
+	}
+
+
+
+post {
+	failure {
+		dingtalk (
+		    robot: '9a31da03-80b7-4944-b985-c215ce896bb6',
+		    type: 'TEXT',
+		    at: [],
+		    atAll: false,
+		    title: '',
+		    text: [${JOB_NAME}+"构建失败",],
+		    messageUrl: '',
+		    picUrl: '',
+		    singleTitle: '',
+		    btns: [],
+		    btnLayout: 'H',
+		    hideAvatar: false
+		)
+	}
+	success {
+		dingtalk (
+		    robot: '9a31da03-80b7-4944-b985-c215ce896bb6',
+		    type: 'TEXT',
+		    at: [],
+		    atAll: false,
+		    title: '',
+		    text: [${JOB_NAME}+"成功",],
+		    messageUrl: '',
+		    picUrl: '',
+		    singleTitle: '',
+		    btns: [],
+		    btnLayout: 'H',
+		    hideAvatar: false
+		)
+	}
+}
+
+
+
+
+
+
+http://172.17.44.127:9000/api/components/search_projects?
+
+
+http://172.17.44.127:9000/api/measures/component?component=%22pipelin-1%22&metricKeys=%22new_bugs,bugs,new_coverage,coverage,new_vulnerabilities,vulnerabilities,new_duplicated_lines_density,duplicated_lines_density%22
+
+
+
+
+
+
+
+
+
