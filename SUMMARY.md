@@ -5,6 +5,10 @@
 
 * [Kubernetes](./k8s/README.md)
 	* [docker安装使用](./k8s/docker_install_use.md)
+	* [k8s介绍部署](./k8s/k8s_jieshao_deploy.md)
+	* [kubectl命令行](./k8s/k8s_kubectl.md)
+	* [k8s入门](./k8s/k8s_rumen.md)
+	* [k8s进阶](./k8s/k8s_jinjie.md)
 
 * [问题总结](./problem/README.md)
 	* [苹果掉单通知](./problem/apple_drop_notice.md)
