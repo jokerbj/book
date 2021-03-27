@@ -13,11 +13,6 @@
 - Linux: `ELK` `运维` `Docker/K8s` `CICD`
 - API：`阿里云API`
 
-## 感谢
-
-- GITBOOK开发与维护人员
-- https://www.gitbook.com/
-
 ## 本书如何生成
 
 下面介绍了gitbook，以及github如何关联travis，travis又部署到github
