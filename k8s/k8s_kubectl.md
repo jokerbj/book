@@ -1,8 +1,5 @@
 
 
-
-[toc]
-
 # kubectl 命令行管理工具
 
 ## kubectl 指令说明
