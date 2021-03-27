@@ -1,0 +1,1608 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>k8s进阶 · liqianlong's book</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="liqianlong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../problem/" />
+    
+    
+    <link rel="prev" href="k8s_rumen.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../gitbook/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../gitbook/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../gitbook/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../gitbook/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../gitbook/images/apple-touch-icon.jpg">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Kubernetes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="docker_install_use.html">
+            
+                <a href="docker_install_use.html">
+            
+                    
+                    docker安装使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="k8s_jieshao_deploy.html">
+            
+                <a href="k8s_jieshao_deploy.html">
+            
+                    
+                    k8s介绍部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="k8s_kubectl.html">
+            
+                <a href="k8s_kubectl.html">
+            
+                    
+                    kubectl命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="k8s_rumen.html">
+            
+                <a href="k8s_rumen.html">
+            
+                    
+                    k8s入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.5" data-path="k8s_jinjie.html">
+            
+                <a href="k8s_jinjie.html">
+            
+                    
+                    k8s进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../problem/">
+            
+                <a href="../problem/">
+            
+                    
+                    问题总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../problem/apple_drop_notice.html">
+            
+                <a href="../problem/apple_drop_notice.html">
+            
+                    
+                    苹果掉单通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../soft/">
+            
+                <a href="../soft/">
+            
+                    
+                    软件使用说明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../soft/get_baidutongji_report.html">
+            
+                <a href="../soft/get_baidutongji_report.html">
+            
+                    
+                    获取百度统计报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../soft/sublime_install_use.html">
+            
+                <a href="../soft/sublime_install_use.html">
+            
+                    
+                    sublime安装使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../soft/postman_install_use.html">
+            
+                <a href="../soft/postman_install_use.html">
+            
+                    
+                    postman安装使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../soft/management_time.html">
+            
+                <a href="../soft/management_time.html">
+            
+                    
+                    时间管理方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >k8s进阶</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x4E00;-&#x4ECE;&#x5916;&#x90E8;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x6700;&#x4F73;&#x65B9;&#x5F0F;"><b>1. </b>&#x4E00; &#x4ECE;&#x5916;&#x90E8;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x6700;&#x4F73;&#x65B9;&#x5F0F;</a></li><ul><li><span class="title-icon "></span><a href="#11-pod&#x4E0E;ingress&#x7684;&#x5173;&#x7CFB;"><b>1.1. </b>1.1 Pod&#x4E0E;Ingress&#x7684;&#x5173;&#x7CFB;</a></li><li><span class="title-icon "></span><a href="#12-ingress-controller-&#xFF08;&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;&#xFF09;"><b>1.2. </b>1.2 Ingress Controller &#xFF08;&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#13-ingress&#xFF08;http&#x4E0E;https&#xFF09;"><b>1.3. </b>1.3 Ingress&#xFF08;HTTP&#x4E0E;HTTPS&#xFF09;</a></li><li><span class="title-icon "></span><a href="#14-&#x8BBF;&#x95EE;&#x8FC7;&#x7A0B;"><b>1.4. </b>1.4 &#x8BBF;&#x95EE;&#x8FC7;&#x7A0B;</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E8C;-&#x914D;&#x7F6E;&#x7BA1;&#x7406;"><b>2. </b>&#x4E8C; &#x914D;&#x7F6E;&#x7BA1;&#x7406;</a></li><ul><li><span class="title-icon "></span><a href="#21-secret"><b>2.1. </b>2.1 Secret</a></li><li><span class="title-icon "></span><a href="#22-configmap"><b>2.2. </b>2.2 Configmap</a></li></ul><li><span class="title-icon "></span><a href="#&#x4E09;-&#x6570;&#x636E;&#x5377;&#x4E0E;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5377;"><b>3. </b>&#x4E09; &#x6570;&#x636E;&#x5377;&#x4E0E;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5377;</a></li><ul><li><span class="title-icon "></span><a href="#31-volume"><b>3.1. </b>3.1 Volume</a></li><ul><li><span class="title-icon "></span><a href="#311-&#x672C;&#x5730;&#x5B58;&#x50A8;"><b>3.1.1. </b>3.1.1 &#x672C;&#x5730;&#x5B58;&#x50A8;</a></li><li><span class="title-icon "></span><a href="#312-&#x7F51;&#x7EDC;&#x5B58;&#x50A8;"><b>3.1.2. </b>3.1.2 &#x7F51;&#x7EDC;&#x5B58;&#x50A8;</a></li></ul><li><span class="title-icon "></span><a href="#32-persistentvolume&#x6301;&#x4E45;&#x5377;"><b>3.2. </b>3.2 PersistentVolume(&#x6301;&#x4E45;&#x5377;)</a></li><ul><li><span class="title-icon "></span><a href="#321-&#x9759;&#x6001;&#x4F9B;&#x7ED9;"><b>3.2.1. </b>3.2.1 &#x9759;&#x6001;&#x4F9B;&#x7ED9;</a></li><li><span class="title-icon "></span><a href="#322-&#x52A8;&#x6001;&#x4F9B;&#x7ED9;"><b>3.2.2. </b>3.2.2 &#x52A8;&#x6001;&#x4F9B;&#x7ED9;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x56DB;-&#x518D;&#x8C08;&#x6709;&#x72B6;&#x6001;&#x5E94;&#x7528;&#x90E8;&#x7F72;"><b>4. </b>&#x56DB; &#x518D;&#x8C08;&#x6709;&#x72B6;&#x6001;&#x5E94;&#x7528;&#x90E8;&#x7F72;</a></li><ul><li><span class="title-icon "></span><a href="#41-headless-service-&#x65E0;&#x5934;&#x670D;&#x52A1;"><b>4.1. </b>4.1 Headless Service &#x65E0;&#x5934;&#x670D;&#x52A1;</a></li><ul><li><span class="title-icon "></span><a href="#42-statefulset"><b>4.1.1. </b>4.2 StatefulSet</a></li><li><span class="title-icon "></span><a href="#43-statefulset&#x4E0E;deployment&#x533A;&#x522B;&#xFF1A;&#x6709;&#x8EAB;&#x4EFD;&#x7684;&#xFF01;"><b>4.1.2. </b>4.3 StatefulSet&#x4E0E;Deployment&#x533A;&#x522B;&#xFF1A;&#x6709;&#x8EAB;&#x4EFD;&#x7684;&#xFF01;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x4E94;-k8s-&#x5B89;&#x5168;&#x673A;&#x5236;"><b>5. </b>&#x4E94; K8S &#x5B89;&#x5168;&#x673A;&#x5236;</a></li><ul><li><span class="title-icon "></span><a href="#51-kubernetes&#x7684;&#x5B89;&#x5168;&#x6846;&#x67B6;"><b>5.1. </b>5.1 Kubernetes&#x7684;&#x5B89;&#x5168;&#x6846;&#x67B6;</a></li><li><span class="title-icon "></span><a href="#52-&#x4F20;&#x8F93;&#x5B89;&#x5168;&#xFF0C;&#x8BA4;&#x8BC1;&#xFF0C;&#x6388;&#x6743;&#xFF0C;&#x51C6;&#x5165;&#x63A7;&#x5236;"><b>5.2. </b>5.2 &#x4F20;&#x8F93;&#x5B89;&#x5168;&#xFF0C;&#x8BA4;&#x8BC1;&#xFF0C;&#x6388;&#x6743;&#xFF0C;&#x51C6;&#x5165;&#x63A7;&#x5236;</a></li><ul><li><span class="title-icon "></span><a href="#521-&#x4F20;&#x8F93;&#x5B89;&#x5168;"><b>5.2.1. </b>5.2.1 &#x4F20;&#x8F93;&#x5B89;&#x5168;</a></li><li><span class="title-icon "></span><a href="#522-&#x8BA4;&#x8BC1;"><b>5.2.2. </b>5.2.2 &#x8BA4;&#x8BC1;</a></li><li><span class="title-icon "></span><a href="#523-&#x9274;&#x6743;"><b>5.2.3. </b>5.2.3 &#x9274;&#x6743;</a></li><li><span class="title-icon "></span><a href="#524-&#x51C6;&#x5165;&#x63A7;&#x5236;&#xFF08;&#x63D2;&#x4EF6;&#x96C6;&#x5408;&#xFF0C;&#x542F;&#x7528;&#x63D2;&#x4EF6;&#xFF09;"><b>5.2.4. </b>5.2.4 &#x51C6;&#x5165;&#x63A7;&#x5236;&#xFF08;&#x63D2;&#x4EF6;&#x96C6;&#x5408;&#xFF0C;&#x542F;&#x7528;&#x63D2;&#x4EF6;&#xFF09;</a></li></ul><li><span class="title-icon "></span><a href="#53-&#x4F7F;&#x7528;rbac&#x6388;&#x6743;"><b>5.3. </b>5.3 &#x4F7F;&#x7528;RBAC&#x6388;&#x6743;</a></li></ul></ul></div><a href="#&#x4E00;-&#x4ECE;&#x5916;&#x90E8;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x6700;&#x4F73;&#x65B9;&#x5F0F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4E00;-&#x4ECE;&#x5916;&#x90E8;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x6700;&#x4F73;&#x65B9;&#x5F0F;"><a name="&#x4E00;-&#x4ECE;&#x5916;&#x90E8;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x6700;&#x4F73;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x4E00;-&#x4ECE;&#x5916;&#x90E8;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x6700;&#x4F73;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x4E00; &#x4ECE;&#x5916;&#x90E8;&#x8BBF;&#x95EE;&#x5E94;&#x7528;&#x6700;&#x4F73;&#x65B9;&#x5F0F;</h1>
+<h2 id="11-pod&#x4E0E;ingress&#x7684;&#x5173;&#x7CFB;"><a name="11-pod&#x4E0E;ingress&#x7684;&#x5173;&#x7CFB;" class="anchor-navigation-ex-anchor" href="#11-pod&#x4E0E;ingress&#x7684;&#x5173;&#x7CFB;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. 1.1 Pod&#x4E0E;Ingress&#x7684;&#x5173;&#x7CFB;</h2>
+<ul>
+<li>&#x4E3A;&#x4F55;&#x5916;&#x90E8;&#x8BBF;&#x95EE;NODEPORT&#x4E0D;&#x662F;&#x6700;&#x597D;&#x7684;&#x9009;&#x62E9;</li>
+</ul>
+<blockquote>
+<p>nodeport&#x662F;&#x5C06;&#x7AEF;&#x53E3;&#x66B4;&#x9732;&#x51FA;&#x53BB;&#xFF0C;&#x8BBF;&#x95EE;&#x9700;&#x8981;&#x8282;&#x70B9;IP+PORT&#x8BBF;&#x95EE;&#xFF0C;&#x5728;&#x521B;&#x5EFA;NODEPORT&#x65F6;&#x5019;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x7EF4;&#x62A4;&#x8FD9;&#x4E9B;&#x7AEF;&#x53E3;&#x662F;&#x5426;&#x5360;&#x7528;&#xFF0C;&#x57FA;&#x4E8E;snat,dnat&#x90FD;&#x662F;&#x56DB;&#x5C42;&#x7684;&#xFF0C;&#x4E0D;&#x80FD;&#x505A;&#x4E03;&#x5C42;&#x7684;&#x3002;&#x7AEF;&#x53E3;&#x8F6C;&#x53D1;&#x6027;&#x80FD;&#x53EF;&#x80FD;&#x4F1A;&#x7A0D;&#x5DEE;&#x4E00;&#x4E9B;&#xFF0C;&#x8981;&#x7ECF;&#x8FC7;&#x9632;&#x706B;&#x5899;&#x7684;&#x8FC7;&#x6EE4;&#x3002;</p>
+</blockquote>
+<ul>
+<li>&#x5177;&#x6709;&#x5168;&#x5C40;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x5668; ingress&#xFF08;&#x5B9E;&#x8D28;&#x89C4;&#x5219;&#xFF09;</li>
+</ul>
+<blockquote>
+<p>&#x66B4;&#x6F0F;&#x7AEF;&#x53E3;&#x4E00;&#x822C;&#x90FD;&#x662F;80 443&#xFF0C;&#x7136;&#x540E;&#x8F6C;&#x53D1;&#x5230;&#x540E;&#x7AEF;&#x7684;&#x7AD9;&#x70B9;&#x4E0A;&#xFF0C;&#x5B9E;&#x73B0;&#x4E0A;&#x8DDF;nginx&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+</blockquote>
+<p><img src="https://www.liqianlong.cn/POD%E4%B8%8EINGRESS%E7%9A%84%E5%85%B3%E7%B3%BB.png" alt="Pod&#x4E0E;Ingress&#x7684;&#x5173;&#x7CFB;"></p>
+<p><code>ep &#x7EF4;&#x6301;&#x7740;pod&#x548C;service&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x901A;&#x8FC7;Ingress Controller&#x5B9E;&#x73B0;Pod&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF0C;&#x652F;&#x6301;TCP/UDP 4&#x5C42;&#x548C;HTTP 7&#x5C42;&#xFF0C;&#x57FA;&#x4E8E;&#x57DF;&#x540D;&#x7684;&#x5B9E;&#x73B0;</code></p>
+<h2 id="12-ingress-controller-&#xFF08;&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;&#xFF09;"><a name="12-ingress-controller-&#xFF08;&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;&#xFF09;" class="anchor-navigation-ex-anchor" href="#12-ingress-controller-&#xFF08;&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. 1.2 Ingress Controller &#xFF08;&#x63A7;&#x5236;&#x5668;&#x5B9E;&#x73B0;&#xFF09;</h2>
+<ol>
+<li>&#x90E8;&#x7F72;Ingress Controller</li>
+</ol>
+<blockquote>
+<p>&#x90E8;&#x7F72;&#x6587;&#x6863; &#xFF1A;<a href="https://github.com/kubernetes/ingress-nginx/blob/master/docs/deploy/index.md" target="_blank">https://github.com/kubernetes/ingress-nginx/blob/master/docs/deploy/index.md</a></p>
+</blockquote>
+<p><code>&#x6216;&#x76F4;&#x63A5;&#x4E0B;&#x8F7D; wget https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/static/mandatory.yaml</code></p>
+<ul>
+<li>&#x63A7;&#x5236;&#x5668;&#x6709;&#x5F88;&#x591A;&#x79CD;&#xFF0C;&#x6BD4;&#x5982;istio&#xFF0C;traefik&#xFF0C;nginx ingress</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;<br>
+ &#x2022; &#x955C;&#x50CF;&#x5730;&#x5740;&#x4FEE;&#x6539;&#x6210;&#x56FD;&#x5185;&#x7684;&#xFF1A;lizhenliang/nginx-ingress-controller:0.20.0 <br>
+ &#x2022; &#x4F7F;&#x7528;&#x5BBF;&#x4E3B;&#x673A;&#x7F51;&#x7EDC;&#xFF1A;hostNetwork: true &#xFF08;&#x66B4;&#x9732;&#x7AEF;&#x53E3;&#xFF09;</p>
+<pre><code>spec:
+  serviceAccountName: nginx-ingress-serviceaccount 
+  hostNetwork: true
+  containers:
+  - name: nginx-ingress-controller
+    image: lizhenliang/nginx-ingress-controller:0.20.0 
+
+kubectl apply -f mandatory.yaml
+kubectl get ns
+kubectl get deploy -n ingress-nginx
+kubectl get pod -o wide -n ingress-nginx
+&#x5728;node1&#x4E0A;&#x67E5;&#x770B;&#x7AEF;&#x53E3;&#x4F1A;&#x6709;80 443&#x7684;&#x76D1;&#x542C;
+</code></pre><p><a href="https://kubernetes.io/docs/concepts/services-networking/ingress/" target="_blank">https://kubernetes.io/docs/concepts/services-networking/ingress/</a></p>
+<ol>
+<li>&#x521B;&#x5EFA;Ingress&#x89C4;&#x5219;</li>
+</ol>
+<blockquote>
+<p>&#x521B;&#x5EFA;&#x7684;&#x89C4;&#x5219;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x653E;&#x5728;&#x4E86;ingress&#x63A7;&#x5236;&#x5668;&#x91CC;&#xFF0C;&#x89E3;&#x6790;&#x5C31;&#x8981;&#x89E3;&#x6790;&#x5230;&#x63A7;&#x5236;&#x5668;&#x5B89;&#x88C5;&#x7684;node &#x7684;ip&#x4E0A;&#xFF0C;&#x89C4;&#x5219;&#xFF1A;&#x57DF;&#x540D;+&#x7AEF;&#x53E3;</p>
+</blockquote>
+<p>&#x63D0;&#x524D;&#xFF1A;
+<code>nginx-deploy.yaml nginx-svc.yaml</code>&#x521B;&#x5EFA;&#x8D77;&#x6765;</p>
+<ul>
+<li>&#x521B;&#x5EFA;&#x89C4;&#x5219;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x9488;&#x5BF9;service&#x66B4;&#x9732;
+```
+cat ingress.yaml 
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+name: example-ingress
+spec:
+rules:<ul>
+<li>host: www.foo.com
+http:
+  paths:<ul>
+<li>backend:
+  ==serviceName: nginx-service ==
+  servicePort: 80</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>kubectl create -f ingress.yaml<br>kubectl get ingress
+&#x5C06;service&#x66B4;&#x9732;&#x51FA;&#x53BB;
+&#x901A;&#x8FC7;&#x4FEE;&#x6539;hosts&#xFF0C;&#x89E3;&#x6790;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x5230;Node&#x7684;&#x5BBF;&#x4E3B;&#x673A;</p>
+<pre><code>&gt; &#x8BF7;&#x6C42;&#x6D41;&#x7A0B; www.foo.com == nginx-service == (ep)POD
+
+
+- &#x89E3;&#x51B3;&#x5355;&#x70B9;
+
+&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6848; LB
+```bash
+&#x4FEE;&#x6539;&#x7C7B;&#x578B;&#x4E3A;dameset&#xFF0C;replicas: 1 &#x5220;&#x9664;
+kubectl delete -f mandatory.yaml
+kubectl create -f mandatory2.yaml
+kubectl get pod -n ingress-nginx -o wide
+2&#x4E2A;&#x8282;&#x70B9;&#x90FD;&#x6709;&#x5B89;&#x88C5;&#x4E86;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x770B;&#x5230;80 443
+user --&gt; lb(vm-nginx 4c) --&gt; node1/node2 --&gt; pod&#xFF0C;&#x5728;&#x901A;&#x8FC7;nginx upstrem&#x8F6C;&#x53D1;&#x5373;&#x53EF;
+</code></pre><p>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6848; &#x505A;&#x4E2A;HA keepavlied VIP</p>
+<h2 id="13-ingress&#xFF08;http&#x4E0E;https&#xFF09;"><a name="13-ingress&#xFF08;http&#x4E0E;https&#xFF09;" class="anchor-navigation-ex-anchor" href="#13-ingress&#xFF08;http&#x4E0E;https&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. 1.3 Ingress&#xFF08;HTTP&#x4E0E;HTTPS&#xFF09;</h2>
+<p>&#x521B;&#x5EFA;&#x8BC1;&#x4E66;&#x5DE5;&#x5177;</p>
+<pre><code>cat cfssl.sh 
+wget https://pkg.cfssl.org/R1.2/cfssl_linux-amd64 
+wget https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64 
+wget https://pkg.cfssl.org/R1.2/cfssl-certinfo_linux-amd64 
+chmod +x cfssl_linux-amd64 cfssljson_linux-amd64 cfssl-certinfo_linux-amd64 
+mv cfssl_linux-amd64 /usr/local/bin/cfssl 
+mv cfssljson_linux-amd64 /usr/local/bin/cfssljson 
+mv cfssl-certinfo_linux-amd64 /usr/bin/cfssl-certinfo
+</code></pre><p>&#x521B;&#x5EFA;&#x8BC1;&#x4E66;</p>
+<pre><code>cat certs.sh 
+cat &gt; ca-config.json &lt;&lt;EOF
+{
+  &quot;signing&quot;: {
+    &quot;default&quot;: {
+      &quot;expiry&quot;: &quot;87600h&quot;
+    },
+    &quot;profiles&quot;: {
+      &quot;kubernetes&quot;: {
+         &quot;expiry&quot;: &quot;87600h&quot;,
+         &quot;usages&quot;: [
+            &quot;signing&quot;,
+            &quot;key encipherment&quot;,
+            &quot;server auth&quot;,
+            &quot;client auth&quot;
+        ]
+      }
+    }
+  }
+}
+EOF
+
+cat &gt; ca-csr.json &lt;&lt;EOF
+{
+    &quot;CN&quot;: &quot;kubernetes&quot;,
+    &quot;key&quot;: {
+        &quot;algo&quot;: &quot;rsa&quot;,
+        &quot;size&quot;: 2048
+    },
+    &quot;names&quot;: [
+        {
+            &quot;C&quot;: &quot;CN&quot;,
+            &quot;L&quot;: &quot;Beijing&quot;,
+            &quot;ST&quot;: &quot;Beijing&quot;
+        }
+    ]
+}
+EOF
+
+cfssl gencert -initca ca-csr.json | cfssljson -bare ca -
+
+cat &gt; blog.ctnrs.com-csr.json &lt;&lt;EOF
+{
+  &quot;CN&quot;: &quot;blog.ctnrs.com&quot;,
+  &quot;hosts&quot;: [],
+  &quot;key&quot;: {
+    &quot;algo&quot;: &quot;rsa&quot;,
+    &quot;size&quot;: 2048
+  },
+  &quot;names&quot;: [
+    {
+      &quot;C&quot;: &quot;CN&quot;,
+      &quot;L&quot;: &quot;BeiJing&quot;,
+      &quot;ST&quot;: &quot;BeiJing&quot;
+    }
+  ]
+}
+EOF
+
+cfssl gencert -ca=ca.pem -ca-key=ca-key.pem -config=ca-config.json -profile=kubernetes blog.ctnrs.com-csr.json | cfssljson -bare blog.ctnrs.com 
+
+# &#x521B;&#x5EFA;tls&#x8BC1;&#x4E66;
+kubectl create secret tls blog-ctnrs-com --cert=blog.ctnrs.com.pem --key=blog.ctnrs.com-key.pem
+</code></pre><p>kubectl get secret</p>
+<pre><code>NAME                                 TYPE                                  DATA   AGE
+blog-ctnrs-com                       kubernetes.io/tls                     2      5d21h
+</code></pre><p>&#x521B;&#x5EFA;ingress-https</p>
+<pre><code>cat ingress-https.yaml 
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: tls-example-ingress
+spec:
+ == tls:
+  - hosts:
+    - blog.ctnrs.com
+    secretName: blog-ctnrs-com==
+  rules:
+  - host: blog.ctnrs.com
+    http:
+      paths:
+      - path: /
+        backend:
+          ==serviceName: nginx-service==
+          servicePort: 80
+
+kubectl apply -f ingress-https.yaml
+kubectl get ingress
+NAME                  HOSTS            ADDRESS   PORTS     AGE
+example-ingress       www.foo.com                80        34m
+tls-example-ingress   blog.ctnrs.com             80, 443   5d21h
+</code></pre><h2 id="14-&#x8BBF;&#x95EE;&#x8FC7;&#x7A0B;"><a name="14-&#x8BBF;&#x95EE;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#14-&#x8BBF;&#x95EE;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. 1.4 &#x8BBF;&#x95EE;&#x8FC7;&#x7A0B;</h2>
+<blockquote>
+<p>user --&gt; cdn --&gt; waf/ddos lb(vm-nginx 4c) ingress-controller (node1/node2) --&gt; pod</p>
+<p>user --&gt; node(vip,ingress controller + keepavlied) --&gt; pod</p>
+</blockquote>
+<h1 id="&#x4E8C;-&#x914D;&#x7F6E;&#x7BA1;&#x7406;"><a name="&#x4E8C;-&#x914D;&#x7F6E;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;-&#x914D;&#x7F6E;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x4E8C; &#x914D;&#x7F6E;&#x7BA1;&#x7406;</h1>
+<h2 id="21-secret"><a name="21-secret" class="anchor-navigation-ex-anchor" href="#21-secret"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. 2.1 Secret</h2>
+<blockquote>
+<p>&#x52A0;&#x5BC6;&#x6570;&#x636E;&#x5E76;&#x5B58;&#x653E;Etcd&#x4E2D;&#xFF0C;&#x8BA9;Pod&#x7684;&#x5BB9;&#x5668;&#x4EE5;&#x6302;&#x8F7D;Volume&#x65B9;&#x5F0F;&#x8BBF;&#x95EE;&#x3002;
+&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x51ED;&#x636E;</p>
+</blockquote>
+<p>Pod&#x4F7F;&#x7528;secret&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF1A;<br>
+&#x2022; &#x53D8;&#x91CF;&#x6CE8;&#x5165; <br> 
+&#x2022; &#x6302;&#x8F7D;</p>
+<p>&#x968F;&#x673A;&#x751F;&#x6210;&#x53D8;&#x91CF;</p>
+<pre><code>echo -n &apos;admin&apos; | base64
+YWRtaW4=
+echo -n &apos;1f2d1e2e67df&apos; | base64
+MWYyZDFlMmU2N2Rm
+</code></pre><p>&#x521B;&#x5EFA;secret</p>
+<pre><code>cat secret.yaml 
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysecret
+type: Opaque
+data:
+  username: YWRtaW4=
+  password: MWYyZDFlMmU2N2Rm
+
+kubectl -f secret.yaml
+kubectl get secret
+</code></pre><p>&#x7B2C;&#x4E00;&#x79CD;&#x53D8;&#x91CF;&#x6CE8;&#x5165;</p>
+<pre><code>cat secret-pod1.yaml 
+apiVersion: v1 
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    env:
+      - name: SECRET_USERNAME
+        valueFrom:
+          secretKeyRef:
+            ==name: mysecret
+            key: username==
+      - name: SECRET_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            ==name: mysecret
+            key: password==
+
+kubectl create -f secret-pod1.yaml
+
+&#x9A8C;&#x8BC1;
+kubectl exec -it mypod bash
+root@mypod:/# echo $SECRET_USERNAME
+admin
+</code></pre><p><code>kubectl delete -f secret-pod1.yaml</code></p>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x6302;&#x8F7D;</p>
+<pre><code>cat secret-pod2.yaml 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  volumes:
+  - name: foo 
+    secret:
+      ==secretName: mysecret==
+  containers:
+  - name: nginx
+    image: nginx
+    ==volumeMounts:
+    - name: foo 
+      readOnly: true
+      mountPath: &quot;/etc/foo&quot;==
+
+kubectl create -f secret-pod2.yaml
+&#x9A8C;&#x8BC1;
+kubectl exec -it mypod bash
+root@mypod:/# cat /etc/foo/username 
+admin
+</code></pre><p><code>kubectl delete -f secret-pod2.yaml</code></p>
+<p><a href="https://kubernetes.io/docs/concepts/configuration/secret/" target="_blank">https://kubernetes.io/docs/concepts/configuration/secret/</a></p>
+<h2 id="22-configmap"><a name="22-configmap" class="anchor-navigation-ex-anchor" href="#22-configmap"><i class="fa fa-link" aria-hidden="true"></i></a>2.2. 2.2 Configmap</h2>
+<blockquote>
+<p>&#x4E0E;Secret&#x7C7B;&#x4F3C;&#xFF0C;&#x533A;&#x522B;&#x5728;&#x4E8E;ConfigMap&#x4FDD;&#x5B58;&#x7684;&#x662F;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x5BC6;&#x914D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;
+&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x5E94;&#x7528;&#x914D;&#x7F6E;</p>
+</blockquote>
+<p>env</p>
+<pre><code>cat configmap1.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfig
+  namespace: default
+data:
+  special.level: info
+  special.type: hello
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: busybox
+      image: busybox
+      command: [ &quot;/bin/sh&quot;, &quot;-c&quot;, &quot;echo $(LEVEL) $(TYPE)&quot; ]
+      ==env:
+        - name: LEVEL
+          valueFrom:
+            configMapKeyRef:
+              name: myconfig
+              key: special.level
+        - name: TYPE
+          valueFrom:
+            configMapKeyRef:
+              name: myconfig
+              key: special.type==
+  restartPolicy: Never
+
+kubectl create -f configmap1.yaml
+kubectl get cm
+&#x9A8C;&#x8BC1;
+kubectl logs mypod
+info hello
+</code></pre><p><code>kubectl delete -f configmap1.yaml</code></p>
+<p>Volume</p>
+<pre><code>cat configmap2.yaml 
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: redis-config
+data:
+  redis.properties: |
+    redis.host=127.0.0.1
+    redis.port=6379
+    redis.password=123456
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+    - name: busybox
+      image: busybox
+      command: [ &quot;/bin/sh&quot;,&quot;-c&quot;,&quot;cat /etc/config/redis.properties&quot; ]
+      ==volumeMounts:
+      - name: config-volume
+        mountPath: /etc/config
+  volumes:
+    - name: config-volume
+      configMap:
+        name: redis-config==
+  restartPolicy: Never
+
+kubectl create -f configmap2.yaml 
+&#x9A8C;&#x8BC1;
+kubectl logs mypod
+redis.host=127.0.0.1
+redis.port=6379
+redis.password=123456
+</code></pre><p><code>kubectl delete -f configmap2.yaml</code></p>
+<p><a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/" target="_blank">https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/</a></p>
+<h1 id="&#x4E09;-&#x6570;&#x636E;&#x5377;&#x4E0E;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5377;"><a name="&#x4E09;-&#x6570;&#x636E;&#x5377;&#x4E0E;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5377;" class="anchor-navigation-ex-anchor" href="#&#x4E09;-&#x6570;&#x636E;&#x5377;&#x4E0E;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x4E09; &#x6570;&#x636E;&#x5377;&#x4E0E;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5377;</h1>
+<ol>
+<li>Volume</li>
+<li>PersistentVolume</li>
+<li>PersistentVolume &#x52A8;&#x6001;&#x4F9B;&#x7ED9;</li>
+</ol>
+<h2 id="31-volume"><a name="31-volume" class="anchor-navigation-ex-anchor" href="#31-volume"><i class="fa fa-link" aria-hidden="true"></i></a>3.1. 3.1 Volume</h2>
+<p>&#x2022; Kubernetes&#x4E2D;&#x7684;Volume&#x63D0;&#x4F9B;&#x4E86;&#x5728;&#x5BB9;&#x5668;&#x4E2D;&#x6302;&#x8F7D;&#x5916;&#x90E8;&#x5B58;&#x50A8;&#x7684;&#x80FD;&#x529B;<br>
+&#x2022; Pod&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x5377;&#x6765;&#x6E90;&#xFF08;spec.volume&#xFF09;&#x548C;&#x6302;&#x8F7D;&#x70B9;&#xFF08;spec.containers.volumeMounts&#xFF09;&#x4E24;&#x4E2A;&#x4FE1;&#x606F;&#x540E;&#x624D;&#x53EF;
+&#x4EE5;&#x4F7F;&#x7528;&#x76F8;&#x5E94;&#x7684;Volume</p>
+<p>&#x5B58;&#x50A8;&#x7C7B;&#x578B;<br>
+&#x672C;&#x5730; hostPath&#xFF0C;emptyDir<br>
+&#x7F51;&#x7EDC; NFS&#xFF0C;Ceph&#xFF0C;Glusterfs<br>
+&#x516C;&#x6709;&#x4E91; AWS EBS<br>
+K8S&#x8D44;&#x6E90; configmap&#xFF0C;secret</p>
+<p><a href="https://kubernetes.io/docs/concepts/storage/volumes/" target="_blank">https://kubernetes.io/docs/concepts/storage/volumes/</a></p>
+<h3 id="311-&#x672C;&#x5730;&#x5B58;&#x50A8;"><a name="311-&#x672C;&#x5730;&#x5B58;&#x50A8;" class="anchor-navigation-ex-anchor" href="#311-&#x672C;&#x5730;&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.1. 3.1.1 &#x672C;&#x5730;&#x5B58;&#x50A8;</h3>
+<p>emptyDir emptyDir = docker(volumes)</p>
+<blockquote>
+<p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A7A;&#x5377;&#xFF0C;&#x6302;&#x8F7D;&#x5230;Pod&#x4E2D;&#x7684;&#x5BB9;&#x5668;&#x3002;Pod&#x5220;&#x9664;&#x8BE5;&#x5377;&#x4E5F;&#x4F1A;&#x88AB;&#x5220;&#x9664;&#x3002;
+&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A;Pod&#x4E2D;&#x5BB9;&#x5668;&#x4E4B;&#x95F4;&#x6570;&#x636E;&#x5171;&#x4EAB;</p>
+</blockquote>
+<pre><code>cat emptydir.yaml 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: write
+    image: centos
+    command: [&quot;bash&quot;,&quot;-c&quot;,&quot;for i in {1..100};do echo $i &gt;&gt; /data/hello;sleep 1;done&quot;]
+    volumeMounts:
+    - name: data
+      mountPath: /data
+
+  - name: read
+    image: centos
+    command: [&quot;bash&quot;,&quot;-c&quot;,&quot;tail -f /data/hello&quot;]
+    volumeMounts:
+    - name: data
+      mountPath: /data
+  volumes:
+  - name: data
+    emptyDir: {}
+
+kubectl create -f emptydir.yaml 
+&#x9A8C;&#x8BC1;
+kubectl logs my-pod -c read -f
+</code></pre><p><code>kubectl delete -f emptydir.yaml</code></p>
+<p>hostPath= bind mounts</p>
+<blockquote>
+<p>&#x6302;&#x8F7D;Node&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4E0A;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x76EE;&#x5F55;&#x5230;Pod&#x4E2D;&#x7684;&#x5BB9;&#x5668;&#x3002;
+&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A;Pod&#x4E2D;&#x5BB9;&#x5668;&#x9700;&#x8981;&#x8BBF;&#x95EE;&#x5BBF;&#x4E3B;&#x673A;&#x6587;&#x4EF6;</p>
+</blockquote>
+<pre><code>cat hostpath.yaml 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: busybox
+    image: busybox
+    args:
+    - /bin/sh
+    - -c 
+    - sleep 36000
+    volumeMounts:
+    - name: data
+      mountPath: /data
+  volumes:
+  - name: data
+    hostPath:
+      path: /tmp
+      type: Directory
+
+kubectl create -f hostpath.yaml
+kubectl get pod -o wide
+&#x9A8C;&#x8BC1;
+&#x5728;node&#x8282;&#x70B9;/tmp&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#xFF0C;&#x5728;&#x5BB9;&#x5668;&#x91CC;&#x521B;&#x5EFA;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#x6548;&#x679C;
+kubectl exec -it my-pod sh
+ls /data
+</code></pre><p><code>kubectl delete -f hostpath.yaml</code></p>
+<h3 id="312-&#x7F51;&#x7EDC;&#x5B58;&#x50A8;"><a name="312-&#x7F51;&#x7EDC;&#x5B58;&#x50A8;" class="anchor-navigation-ex-anchor" href="#312-&#x7F51;&#x7EDC;&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a>3.1.2. 3.1.2 &#x7F51;&#x7EDC;&#x5B58;&#x50A8;</h3>
+<p>NFS</p>
+<p>&#x5728;master&#x8282;&#x70B9;&#x5B89;&#x88C5;nfs&#x670D;&#x52A1;</p>
+<pre><code>yum install -y nfs-utils
+vi /etc/exports
+
+&#x8BBE;&#x7F6E;&#x5171;&#x4EAB;&#x76EE;&#x5F55;
+mkdir /opt/k8s
+/opt/k8s 192.168.31.0/24(rw,no_root_squash)
+
+node &#x8282;&#x70B9;&#x6D4B;&#x8BD5;&#x53EF;&#x4EE5;&#x6302;&#x8F7D;(&#x4E5F;&#x662F;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x7684;)
+mount -t nfs 192.168.31.61:/opt/k8s /mnt
+umount /mnt
+</code></pre><p>&#x5728;k8s&#x91CC;&#x9762;&#x4F7F;&#x7528;</p>
+<pre><code>cat nfs.yaml 
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        volumeMounts:
+        - name: wwwroot
+          mountPath: /usr/share/nginx/html
+        ports:
+        - containerPort: 80
+      ==volumes:
+      - name: wwwroot
+        nfs:
+          server: 192.168.31.61
+          path: /opt/k8s==
+
+kubectl create -f nfs.yaml
+&#x9A8C;&#x8BC1;
+kubectl exec -it nginx-deployment-d88d8f455-jgphg bash
+df -h|grep k8s
+192.168.31.61:/opt/k8s   18G  2.9G   14G  19% /usr/share/nginx/html
+cd /usr/share/nginx/html/
+echo helloword &gt; index.html
+
+kubectl get pod -o wide
+curl 10.244.1.27
+helloword
+</code></pre><p><code>kubectl delete -f nfs.yaml</code></p>
+<h2 id="32-persistentvolume&#x6301;&#x4E45;&#x5377;"><a name="32-persistentvolume&#x6301;&#x4E45;&#x5377;" class="anchor-navigation-ex-anchor" href="#32-persistentvolume&#x6301;&#x4E45;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2. 3.2 PersistentVolume(&#x6301;&#x4E45;&#x5377;)</h2>
+<p>PersistentVolume&#xFF08;PV&#xFF09;&#xFF1A;&#x5BF9;&#x5B58;&#x50A8;&#x8D44;&#x6E90;&#x521B;&#x5EFA;&#x548C;&#x4F7F;&#x7528;&#x7684;&#x62BD;&#x8C61;&#xFF0C;&#x4F7F;&#x5F97;&#x5B58;&#x50A8;&#x4F5C;&#x4E3A;&#x96C6;&#x7FA4;&#x4E2D;&#x7684;&#x8D44;&#x6E90;&#x7BA1;&#x7406;<br></p>
+<ul>
+<li>&#x9759;&#x6001;</li>
+<li>&#x52A8;&#x6001;</li>
+</ul>
+<p>PersistentVolumeClaim&#xFF08;PVC&#xFF09;&#xFF1A;&#x8BA9;&#x7528;&#x6237;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x5FC3;&#x5177;&#x4F53;&#x7684;Volume&#x5B9E;&#x73B0;&#x7EC6;&#x8282;</p>
+<h3 id="321-&#x9759;&#x6001;&#x4F9B;&#x7ED9;"><a name="321-&#x9759;&#x6001;&#x4F9B;&#x7ED9;" class="anchor-navigation-ex-anchor" href="#321-&#x9759;&#x6001;&#x4F9B;&#x7ED9;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.1. 3.2.1 &#x9759;&#x6001;&#x4F9B;&#x7ED9;</h3>
+<p><img src="https://www.liqianlong.cn/PV%E9%9D%99%E6%80%81%E4%BE%9B%E7%BB%99.png" alt="PV&#x9759;&#x6001;&#x4F9B;&#x7ED9;"></p>
+<p>&#x5148;&#x521B;&#x5EFA;PV</p>
+<pre><code>cat pv1.yaml 
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv001
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+  - ReadWriteMany
+  nfs:
+    path: /opt/k8s/001
+    server: 192.168.31.61
+
+cat pv2.yaml 
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv002
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteMany
+  nfs:
+    path: /opt/k8s/002
+    server: 192.168.31.61
+
+kubectl create -f pv1.yaml
+kubectl create -f pv2.yaml
+kubectl get pv
+</code></pre><p>&#x521B;&#x5EFA;pvc&#x548C;pod&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x53EF;&#x4EE5;&#x5199;&#x5230;&#x4E00;&#x8D77;&#x7684;</p>
+<pre><code>cat pod.yaml 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: www
+      mountPath: /usr/share/nginx/html
+  volumes:
+  - name: www
+    persistentVolumeClaim:
+      claimName: my-pvc
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-pvc
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+
+kubectl create -f pod.yaml       
+kubectl get pvc &#x4F60;&#x4F1A;&#x770B;&#x5230;&#x7ED1;&#x5B9A;&#x7684;&#x662F;5Gi&#x7684;PV&#x5377;
+&#x9A8C;&#x8BC1; &#x540C;nfs&#xFF0C;&#x8FDB;&#x5165;&#x5BB9;&#x5668;
+</code></pre><p><code>kubectl delete -f pod.yaml &amp; kubectl delete -f pv1.yaml &amp; kubectl delete -f pv2.yaml</code></p>
+<p>Kubernetes&#x652F;&#x6301;&#x6301;&#x4E45;&#x5377;&#x7684;&#x5B58;&#x50A8;&#x63D2;&#x4EF6;&#xFF1A;
+<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/" target="_blank">https://kubernetes.io/docs/concepts/storage/persistent-volumes/</a></p>
+<h3 id="322-&#x52A8;&#x6001;&#x4F9B;&#x7ED9;"><a name="322-&#x52A8;&#x6001;&#x4F9B;&#x7ED9;" class="anchor-navigation-ex-anchor" href="#322-&#x52A8;&#x6001;&#x4F9B;&#x7ED9;"><i class="fa fa-link" aria-hidden="true"></i></a>3.2.2. 3.2.2 &#x52A8;&#x6001;&#x4F9B;&#x7ED9;</h3>
+<p><img src="https://www.liqianlong.cn/PV%E5%8A%A8%E6%80%81%E4%BE%9B%E7%BB%99.png" alt="PV&#x52A8;&#x6001;&#x4F9B;&#x7ED9;"></p>
+<p>Dynamic Provisioning&#x673A;&#x5236;&#x5DE5;&#x4F5C;&#x7684;&#x6838;&#x5FC3;&#x5728;&#x4E8E;StorageClass&#x7684;API&#x5BF9;&#x8C61;&#x3002;
+StorageClass&#x58F0;&#x660E;&#x5B58;&#x50A8;&#x63D2;&#x4EF6;&#xFF0C;&#x7528;&#x4E8E;&#x81EA;&#x52A8;&#x521B;&#x5EFA;PV&#x3002;</p>
+<p>Kubernetes&#x652F;&#x6301;&#x52A8;&#x6001;&#x4F9B;&#x7ED9;&#x7684;&#x5B58;&#x50A8;&#x63D2;&#x4EF6;&#xFF1A;
+<a href="https://kubernetes.io/docs/concepts/storage/storage-classes/" target="_blank">https://kubernetes.io/docs/concepts/storage/storage-classes/</a></p>
+<p>&#x57FA;&#x4E8E;NFS&#x5B58;&#x50A8;&#x5B9E;&#x73B0;&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;&#x3002;
+<a href="https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client/deploy" target="_blank">https://github.com/kubernetes-incubator/external-storage/tree/master/nfs-client/deploy</a></p>
+<p>&#x751F;&#x6210;rbac&#x8BBF;&#x95EE;&#x6743;&#x9650;</p>
+<pre><code>cat rbac.yaml 
+kind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: nfs-client-provisioner
+---
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: nfs-client-provisioner-runner
+rules:
+  - apiGroups: [&quot;&quot;]
+    resources: [&quot;persistentvolumes&quot;]
+    verbs: [&quot;get&quot;, &quot;list&quot;, &quot;watch&quot;, &quot;create&quot;, &quot;delete&quot;]
+  - apiGroups: [&quot;&quot;]
+    resources: [&quot;persistentvolumeclaims&quot;]
+    verbs: [&quot;get&quot;, &quot;list&quot;, &quot;watch&quot;, &quot;update&quot;]
+  - apiGroups: [&quot;storage.k8s.io&quot;]
+    resources: [&quot;storageclasses&quot;]
+    verbs: [&quot;get&quot;, &quot;list&quot;, &quot;watch&quot;]
+  - apiGroups: [&quot;&quot;]
+    resources: [&quot;events&quot;]
+    verbs: [&quot;create&quot;, &quot;update&quot;, &quot;patch&quot;]
+---
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: run-nfs-client-provisioner
+subjects:
+  - kind: ServiceAccount
+    name: nfs-client-provisioner
+    namespace: default
+roleRef:
+  kind: ClusterRole
+  name: nfs-client-provisioner-runner
+  apiGroup: rbac.authorization.k8s.io
+---
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: leader-locking-nfs-client-provisioner
+rules:
+  - apiGroups: [&quot;&quot;]
+    resources: [&quot;endpoints&quot;]
+    verbs: [&quot;get&quot;, &quot;list&quot;, &quot;watch&quot;, &quot;create&quot;, &quot;update&quot;, &quot;patch&quot;]
+---
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: leader-locking-nfs-client-provisioner
+subjects:
+  - kind: ServiceAccount
+    name: nfs-client-provisioner
+    # replace with namespace where provisioner is deployed
+    namespace: default
+roleRef:
+  kind: Role
+  name: leader-locking-nfs-client-provisioner
+  apiGroup: rbac.authorization.k8s.io
+
+kubectl create -f rbac.yaml 
+kubectl get sa
+</code></pre><p>&#x521B;&#x5EFA;&#x5B58;&#x50A8;&#x7C7B;&#x652F;&#x6301;nfs</p>
+<pre><code>cat class.yaml 
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: managed-nfs-storage
+provisioner: fuseim.pri/ifs # or choose another name, must match deployment&apos;s env PROVISIONER_NAME&apos;
+parameters:
+  archiveOnDelete: &quot;true&quot;
+
+kubectl create -f class.yaml
+kubectl get sc
+</code></pre><p>&#x90E8;&#x7F72;</p>
+<pre><code>cat deployment.yaml 
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: nfs-client-provisioner
+---
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: nfs-client-provisioner
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: nfs-client-provisioner
+    spec:
+      serviceAccountName: nfs-client-provisioner
+      containers:
+        - name: nfs-client-provisioner
+          image: lizhenliang/nfs-client-provisioner:latest
+          volumeMounts:
+            - name: nfs-client-root
+              mountPath: /persistentvolumes
+          env:
+            - name: PROVISIONER_NAME
+              value: fuseim.pri/ifs
+            - name: NFS_SERVER
+              value: 192.168.31.61 
+            - name: NFS_PATH
+              value: /opt/k8s
+      volumes:
+        - name: nfs-client-root
+          nfs:
+            server: 192.168.31.61
+            path: /opt/k8s
+
+kubectl create -f deployment.yaml 
+kubectl get pod
+kubectl get deploy
+</code></pre><p>pod</p>
+<pre><code>cat pod2.yaml 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx:latest
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - name: www
+      mountPath: /usr/share/nginx/html
+  volumes:
+  - name: www
+    persistentVolumeClaim:
+      claimName: my-pvc
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-pvc
+  ==annotations:
+    volume.beta.kubernetes.io/storage-class: &quot;managed-nfs-storage&quot;==
+spec:
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 5Gi
+
+
+kubectl create -f pod2.yaml
+kubectl get pvc
+&#x9A8C;&#x8BC1;&#xFF0C;&#x540C;nfs
+master&#x770B;&#x6302;&#x8F7D;&#x70B9;&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;
+ls /opt/k8s/
+001  002  default-my-pvc-pvc-8aefb4b9-c9fd-48f0-bb77-569e17e3fcb8
+</code></pre><p><code>kubectl delete -f pod2.yaml/deployment.yaml/class.yaml/rbac.yaml</code></p>
+<p>pod --&gt; pvc --&gt; storageclass(&#x540E;&#x7AEF;&#x5B58;&#x50A8;) --&gt; pv</p>
+<p><a href="https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/" target="_blank">https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/</a></p>
+<h1 id="&#x56DB;-&#x518D;&#x8C08;&#x6709;&#x72B6;&#x6001;&#x5E94;&#x7528;&#x90E8;&#x7F72;"><a name="&#x56DB;-&#x518D;&#x8C08;&#x6709;&#x72B6;&#x6001;&#x5E94;&#x7528;&#x90E8;&#x7F72;" class="anchor-navigation-ex-anchor" href="#&#x56DB;-&#x518D;&#x8C08;&#x6709;&#x72B6;&#x6001;&#x5E94;&#x7528;&#x90E8;&#x7F72;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x56DB; &#x518D;&#x8C08;&#x6709;&#x72B6;&#x6001;&#x5E94;&#x7528;&#x90E8;&#x7F72;</h1>
+<ol>
+<li>Headless Service</li>
+<li>StatefulSet</li>
+</ol>
+<p>&#x6709;&#x72B6;&#x6001;:db&#xFF08;&#x5B58;&#x50A8;&#xFF0C;&#x7F51;&#x7EDC;ID&#xFF09;
+&#x65E0;&#x72B6;&#x6001;:web&#xFF0C;&#x8BBF;&#x95EE;&#x6CE2;&#x52A8;&#x5927;&#xFF0C;&#x7248;&#x672C;&#x8FED;&#x4EE3;&#x5FEB;&#xFF0C;&#x5F39;&#x6027;&#x4F38;&#x7F29;&#xFF08;&#x653E;&#x5728;K8s&#xFF09;</p>
+<blockquote>
+<p>&#x90E8;&#x7F72;&#x6709;&#x72B6;&#x6001;&#x5E94;&#x7528;</p>
+</blockquote>
+<ul>
+<li>&#x89E3;&#x51B3;Pod&#x72EC;&#x7ACB;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x4FDD;&#x6301;Pod&#x542F;&#x52A8;&#x987A;&#x5E8F;&#x548C;&#x552F;&#x4E00;&#x6027;<ul>
+<li>&#x7A33;&#x5B9A;&#xFF0C;&#x552F;&#x4E00;&#x7684;&#x7F51;&#x7EDC;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x6301;&#x4E45;&#x5B58;&#x50A8;</li>
+<li>&#x6709;&#x5E8F;&#xFF0C;&#x4F18;&#x96C5;&#x7684;&#x90E8;&#x7F72;&#x548C;&#x6269;&#x5C55;&#x3001;&#x5220;&#x9664;&#x548C;&#x7EC8;&#x6B62;</li>
+<li>&#x6709;&#x5E8F;&#xFF0C;&#x6EDA;&#x52A8;&#x66F4;&#x65B0;</li>
+</ul>
+</li>
+<li>&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF1A;&#x6570;&#x636E;&#x5E93;</li>
+</ul>
+<h2 id="41-headless-service-&#x65E0;&#x5934;&#x670D;&#x52A1;"><a name="41-headless-service-&#x65E0;&#x5934;&#x670D;&#x52A1;" class="anchor-navigation-ex-anchor" href="#41-headless-service-&#x65E0;&#x5934;&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. 4.1 Headless Service &#x65E0;&#x5934;&#x670D;&#x52A1;</h2>
+<p><a href="https://kubernetes.io/zh/docs/concepts/services-networking/service/" target="_blank">https://kubernetes.io/zh/docs/concepts/services-networking/service/</a></p>
+<p>&#x521B;&#x5EFA;&#x666E;&#x901A;&#x7684;svc</p>
+<pre><code>kind: Service
+apiVersion: v1
+metadata:
+  name: my-service
+spec:
+  selector:
+    app: MyApp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+</code></pre><p>&#x6709;&#x65F6;&#x4E0D;&#x9700;&#x8981;&#x6216;&#x4E0D;&#x60F3;&#x8981;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#xFF0C;&#x4EE5;&#x53CA;&#x5355;&#x72EC;&#x7684; Service IP&#x3002; &#x9047;&#x5230;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6307;&#x5B9A; Cluster IP&#xFF08;spec.clusterIP&#xFF09;&#x7684;&#x503C;&#x4E3A; &quot;None&quot; &#x6765;&#x521B;&#x5EFA; Headless Service&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x65E0;&#x5934;&#x7684;svc</p>
+<pre><code>cat headless.yaml 
+kind: Service
+apiVersion: v1
+metadata:
+  ==name: my-service==
+spec:
+  selector:
+    app: nginx 
+  clusterIP: None
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+
+kubectl create -f headless.yaml
+kubectl get svc
+</code></pre><p>&#x6CA1;&#x6709;IP&#x4E86;&#xFF0C;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x8BBF;&#x95EE;&#x5462;&#xFF1F;</p>
+<h3 id="42-statefulset"><a name="42-statefulset" class="anchor-navigation-ex-anchor" href="#42-statefulset"><i class="fa fa-link" aria-hidden="true"></i></a>4.1.1. 4.2 StatefulSet</h3>
+<p>&#x521B;&#x5EFA;sateful&#x5BF9;&#x8C61;</p>
+<pre><code>cat satefulset.yaml
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: nginx-statefulset
+  namespace: default
+spec:
+  ==serviceName: my-service==
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+
+kubectl create -f satefulset.yaml  (&#x521B;&#x5EFA;&#x662F;0 1 2)
+</code></pre><p>&#x901A;&#x8FC7;<code>kubectl get ep</code>&#x6CA1;&#x6709;IP&#xFF0C;&#x901A;&#x8FC7;&#x5185;&#x90E8;DNS&#x8BBF;&#x95EE;</p>
+<p>&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;busybox&#x955C;&#x50CF;&#xFF0C;&#x8FDB;&#x5165;&#x7136;&#x540E;nslookup</p>
+<pre><code>cat busy.yaml 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+  namespace: default
+spec:
+  containers:
+  - name: busybox
+    image: busybox:1.28.4
+    command:
+    - sleep
+    - &quot;36000&quot;
+    imagePullPolicy: IfNotPresent
+  restartPolicy: Always
+
+kubectl create -f busy.yaml
+</code></pre><p>&#x9A8C;&#x8BC1;</p>
+<pre><code>kubectl exec -it busybox sh
+
+nslookup my-service
+Server:    10.1.0.10
+Address 1: 10.1.0.10 kube-dns.kube-system.svc.cluster.local
+
+Name:      my-service
+Address 1: 10.244.2.13 nginx-statefulset-0.my-service.default.svc.cluster.local
+Address 2: 10.244.1.19 nginx-statefulset-1.my-service.default.svc.cluster.local
+Address 3: 10.244.2.14 nginx-statefulset-2.my-service.default.svc.cluster.local
+ping &#x54EA;&#x4E2A;&#x5730;&#x5740;&#x90FD;&#x80FD;Ping&#x901A;
+</code></pre><p><code>kubectl delete -f satefulset.yaml</code></p>
+<p>&#x5B58;&#x50A8;&#x72B6;&#x6001;
+&#x4E13;&#x5C5E;&#x5B58;&#x50A8;(volumeClaimTemplates)&#xFF0C;&#x786E;&#x4FDD;&#x6BCF;&#x4E00;&#x4E2A;POD&#x7528;&#x81EA;&#x5DF1;&#x7684;</p>
+<pre><code>cat satefulset2.yaml 
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+spec:
+  ports:
+  - port: 80
+    name: web
+  clusterIP: None
+  selector:
+    app: nginx
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: web
+spec:
+  selector:
+    matchLabels:
+      app: nginx # has to match .spec.template.metadata.labels
+  serviceName: &quot;nginx&quot;
+  replicas: 3 # by default is 1
+  template:
+    metadata:
+      labels:
+        app: nginx # has to match .spec.selector.matchLabels
+    spec:
+      terminationGracePeriodSeconds: 10
+      containers:
+      - name: nginx
+        image: nginx 
+        ports:
+        - containerPort: 80
+          name: web
+        volumeMounts:
+        - name: www
+          mountPath: /usr/share/nginx/html
+  ==volumeClaimTemplates:
+  - metadata:
+      name: www
+    spec:
+      accessModes: [ &quot;ReadWriteOnce&quot; ]
+      storageClassName: &quot;managed-nfs-storage&quot;
+      resources:
+        requests:
+          storage: 1Gi==
+
+kubectl create -f satefulset2.yaml
+kubectl get pods
+kubecte get pv
+
+&#x9A8C;&#x8BC1;
+ls /opt/k8s
+</code></pre><p><code>kubectl delete -f satefulset2.yaml</code>
+&#x5F3A;&#x5236;&#x5220;&#x9664;pod <code>kubectl delete pod web-0 --force --grace-period=0</code> <br>
+&#x5220;&#x9664;pvc <code>kubectl delete pvc www-web-0</code> <br>
+&#x5220;&#x9664;Pv <code>kubectl delete pv pvc-84b626ff-d06c-44ae-b737-4cd70c15be25</code></p>
+<p>&#x6CE8;&#x610F; <br>
+<code>&#x56E0;&#x4E3A;&#x7528;&#x4E86;&#x5B58;&#x50A8;&#x72B6;&#x6001;&#xFF0C;&#x9700;&#x8981;&#x5B58;&#x50A8;&#x7C7B;class.yaml&#xFF0C;&#x90E8;&#x7F72;deployment&#xFF0C;&#x6743;&#x9650;rbac.yaml</code></p>
+<h3 id="43-statefulset&#x4E0E;deployment&#x533A;&#x522B;&#xFF1A;&#x6709;&#x8EAB;&#x4EFD;&#x7684;&#xFF01;"><a name="43-statefulset&#x4E0E;deployment&#x533A;&#x522B;&#xFF1A;&#x6709;&#x8EAB;&#x4EFD;&#x7684;&#xFF01;" class="anchor-navigation-ex-anchor" href="#43-statefulset&#x4E0E;deployment&#x533A;&#x522B;&#xFF1A;&#x6709;&#x8EAB;&#x4EFD;&#x7684;&#xFF01;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1.2. 4.3 StatefulSet&#x4E0E;Deployment&#x533A;&#x522B;&#xFF1A;&#x6709;&#x8EAB;&#x4EFD;&#x7684;&#xFF01;</h3>
+<p>&#x8EAB;&#x4EFD;&#x4E09;&#x8981;&#x7D20;&#xFF1A;</p>
+<ul>
+<li>&#x57DF;&#x540D;</li>
+<li>&#x4E3B;&#x673A;&#x540D;</li>
+<li>&#x5B58;&#x50A8;&#xFF08;PVC)</li>
+</ul>
+<blockquote>
+<p>ClusterIP A&#x8BB0;&#x5F55;&#x683C;&#x5F0F;&#xFF1A; </p>
+<p><service-name>.<namespace-name>.svc.cluster.local</namespace-name></service-name></p>
+<p>ClusterIP=None A&#x8BB0;&#x5F55;&#x683C;&#x5F0F;&#xFF1A; </p>
+<p><statefulsetname-index>.<service-name> .<namespace-name>.svc.cluster.local</namespace-name></service-name></statefulsetname-index></p>
+</blockquote>
+<p>nslookup kubernetes.default.svc.cluster.local<br>
+nslookup web-0.nginx.default.svc.cluster.local</p>
+<h1 id="&#x4E94;-k8s-&#x5B89;&#x5168;&#x673A;&#x5236;"><a name="&#x4E94;-k8s-&#x5B89;&#x5168;&#x673A;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x4E94;-k8s-&#x5B89;&#x5168;&#x673A;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x4E94; K8S &#x5B89;&#x5168;&#x673A;&#x5236;</h1>
+<ol>
+<li>Kubernetes&#x7684;&#x5B89;&#x5168;&#x6846;&#x67B6;</li>
+<li>&#x4F20;&#x8F93;&#x5B89;&#x5168;&#xFF0C;&#x8BA4;&#x8BC1;&#xFF0C;&#x6388;&#x6743;&#xFF0C;&#x51C6;&#x5165;&#x63A7;&#x5236;</li>
+<li>&#x4F7F;&#x7528;RBAC&#x6388;&#x6743;</li>
+</ol>
+<h2 id="51-kubernetes&#x7684;&#x5B89;&#x5168;&#x6846;&#x67B6;"><a name="51-kubernetes&#x7684;&#x5B89;&#x5168;&#x6846;&#x67B6;" class="anchor-navigation-ex-anchor" href="#51-kubernetes&#x7684;&#x5B89;&#x5168;&#x6846;&#x67B6;"><i class="fa fa-link" aria-hidden="true"></i></a>5.1. 5.1 Kubernetes&#x7684;&#x5B89;&#x5168;&#x6846;&#x67B6;</h2>
+<p><img src="https://www.liqianlong.cn/K8S%E5%AE%89%E5%85%A8%E6%A1%86%E6%9E%B6.png" alt="K8S&#x5B89;&#x5168;&#x6846;&#x67B6;"></p>
+<p>&#x2022; &#x8BBF;&#x95EE;K8S&#x96C6;&#x7FA4;&#x7684;&#x8D44;&#x6E90;&#x9700;&#x8981;&#x8FC7;&#x4E09;&#x5173;&#xFF1A;&#x4F20;&#x8F93;&#x5B89;&#x5168;&#x3001;&#x8BA4;&#x8BC1;&#x3001;&#x9274;&#x6743;&#x3001;&#x51C6;&#x5165;&#x63A7;&#x5236;
+&#x2022; &#x666E;&#x901A;&#x7528;&#x6237;&#x82E5;&#x8981;&#x5B89;&#x5168;&#x8BBF;&#x95EE;&#x96C6;&#x7FA4;API Server&#xFF0C;&#x5F80;&#x5F80;&#x9700;&#x8981;&#x8BC1;&#x4E66;&#x3001;Token&#x6216;&#x8005;&#x7528;&#x6237;&#x540D;+&#x5BC6;&#x7801;&#xFF1B;Pod&#x8BBF;&#x95EE;&#xFF0C;&#x9700;&#x8981;ServiceAccount
+&#x2022; K8S&#x5B89;&#x5168;&#x63A7;&#x5236;&#x6846;&#x67B6;&#x4E3B;&#x8981;&#x7531;&#x4E0B;&#x9762;3&#x4E2A;&#x9636;&#x6BB5;&#x8FDB;&#x884C;&#x63A7;&#x5236;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#x90FD;&#x652F;&#x6301;&#x63D2;&#x4EF6;&#x65B9;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;API Server&#x914D;&#x7F6E;&#x6765;&#x542F;&#x7528;&#x63D2;&#x4EF6;&#x3002;</p>
+<ol>
+<li>Authentication</li>
+<li>Authorization</li>
+<li>Admission Control</li>
+</ol>
+<p>api&#x76F8;&#x5173;&#x8BA4;&#x8BC1;
+<code>cat /etc/kubernetes/mainfests/kube-apiserver.yaml</code></p>
+<h2 id="52-&#x4F20;&#x8F93;&#x5B89;&#x5168;&#xFF0C;&#x8BA4;&#x8BC1;&#xFF0C;&#x6388;&#x6743;&#xFF0C;&#x51C6;&#x5165;&#x63A7;&#x5236;"><a name="52-&#x4F20;&#x8F93;&#x5B89;&#x5168;&#xFF0C;&#x8BA4;&#x8BC1;&#xFF0C;&#x6388;&#x6743;&#xFF0C;&#x51C6;&#x5165;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#52-&#x4F20;&#x8F93;&#x5B89;&#x5168;&#xFF0C;&#x8BA4;&#x8BC1;&#xFF0C;&#x6388;&#x6743;&#xFF0C;&#x51C6;&#x5165;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2. 5.2 &#x4F20;&#x8F93;&#x5B89;&#x5168;&#xFF0C;&#x8BA4;&#x8BC1;&#xFF0C;&#x6388;&#x6743;&#xFF0C;&#x51C6;&#x5165;&#x63A7;&#x5236;</h2>
+<h3 id="521-&#x4F20;&#x8F93;&#x5B89;&#x5168;"><a name="521-&#x4F20;&#x8F93;&#x5B89;&#x5168;" class="anchor-navigation-ex-anchor" href="#521-&#x4F20;&#x8F93;&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2.1. 5.2.1 &#x4F20;&#x8F93;&#x5B89;&#x5168;</h3>
+<p>&#x2022; &#x544A;&#x522B;8080&#xFF0C;&#x8FCE;&#x63A5;6443
+&#x2022; &#x5168;&#x9762;&#x57FA;&#x4E8E;HTTPS</p>
+<h3 id="522-&#x8BA4;&#x8BC1;"><a name="522-&#x8BA4;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#522-&#x8BA4;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2.2. 5.2.2 &#x8BA4;&#x8BC1;</h3>
+<p>&#x4E09;&#x79CD;&#x5BA2;&#x6237;&#x7AEF;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#xFF1A; </p>
+<ul>
+<li>HTTPS &#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;&#xFF1A;&#x57FA;&#x4E8E;CA&#x8BC1;&#x4E66;&#x7B7E;&#x540D;&#x7684;&#x6570;&#x5B57;&#x8BC1;&#x4E66;&#x8BA4;&#x8BC1;</li>
+<li>HTTP Token&#x8BA4;&#x8BC1;&#xFF1A;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;Token&#x6765;&#x8BC6;&#x522B;&#x7528;&#x6237;</li>
+<li>HTTP Base&#x8BA4;&#x8BC1;&#xFF1A;&#x7528;&#x6237;&#x540D;+&#x5BC6;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x8BA4;&#x8BC1;</li>
+</ul>
+<h3 id="523-&#x9274;&#x6743;"><a name="523-&#x9274;&#x6743;" class="anchor-navigation-ex-anchor" href="#523-&#x9274;&#x6743;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2.3. 5.2.3 &#x9274;&#x6743;</h3>
+<p>RBAC&#xFF08;Role-Based Access Control&#xFF0C;&#x57FA;&#x4E8E;&#x89D2;&#x8272;&#x7684;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#xFF09;&#xFF1A;&#x8D1F;&#x8D23;&#x5B8C;&#x6210;&#x6388;&#x6743;&#xFF08;Authorization&#xFF09;&#x5DE5;&#x4F5C;&#x3002;</p>
+<h3 id="524-&#x51C6;&#x5165;&#x63A7;&#x5236;&#xFF08;&#x63D2;&#x4EF6;&#x96C6;&#x5408;&#xFF0C;&#x542F;&#x7528;&#x63D2;&#x4EF6;&#xFF09;"><a name="524-&#x51C6;&#x5165;&#x63A7;&#x5236;&#xFF08;&#x63D2;&#x4EF6;&#x96C6;&#x5408;&#xFF0C;&#x542F;&#x7528;&#x63D2;&#x4EF6;&#xFF09;" class="anchor-navigation-ex-anchor" href="#524-&#x51C6;&#x5165;&#x63A7;&#x5236;&#xFF08;&#x63D2;&#x4EF6;&#x96C6;&#x5408;&#xFF0C;&#x542F;&#x7528;&#x63D2;&#x4EF6;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>5.2.4. 5.2.4 &#x51C6;&#x5165;&#x63A7;&#x5236;&#xFF08;&#x63D2;&#x4EF6;&#x96C6;&#x5408;&#xFF0C;&#x542F;&#x7528;&#x63D2;&#x4EF6;&#xFF09;</h3>
+<p>Adminssion Control&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x51C6;&#x5165;&#x63A7;&#x5236;&#x5668;&#x63D2;&#x4EF6;&#x5217;&#x8868;&#xFF0C;&#x53D1;&#x9001;&#x5230;API Server&#x7684;&#x8BF7;&#x6C42;&#x90FD;&#x9700;&#x8981;&#x7ECF;&#x8FC7;&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x51C6;&#x5165;&#x63A7;&#x5236;&#x5668;
+&#x63D2;&#x4EF6;&#x7684;&#x68C0;&#x67E5;&#xFF0C;&#x68C0;&#x67E5;&#x4E0D;&#x901A;&#x8FC7;&#xFF0C;&#x5219;&#x62D2;&#x7EDD;&#x8BF7;&#x6C42;&#x3002;
+1.11&#x7248;&#x672C;&#x4EE5;&#x4E0A;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#xFF1A;
+--enable-admission-plugins= \
+NamespaceLifecycle,LimitRanger,ServiceAccount,DefaultStorageClass,DefaultTolerationSeconds,ResourceQuota</p>
+<h2 id="53-&#x4F7F;&#x7528;rbac&#x6388;&#x6743;"><a name="53-&#x4F7F;&#x7528;rbac&#x6388;&#x6743;" class="anchor-navigation-ex-anchor" href="#53-&#x4F7F;&#x7528;rbac&#x6388;&#x6743;"><i class="fa fa-link" aria-hidden="true"></i></a>5.3. 5.3 &#x4F7F;&#x7528;RBAC&#x6388;&#x6743;</h2>
+<p>RBAC&#xFF08;Role-Based Access Control&#xFF0C;&#x57FA;&#x4E8E;&#x89D2;&#x8272;&#x7684;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#xFF09;&#xFF0C;&#x5141;&#x8BB8;&#x901A;&#x8FC7;Kubernetes API&#x52A8;&#x6001;&#x914D;&#x7F6E;&#x7B56;&#x7565;&#x3002;</p>
+<p><img src="https://www.liqianlong.cn/RBAC%E6%8E%88%E6%9D%83.png" alt="RBAC&#x6388;&#x6743;"></p>
+<ul>
+<li>&#x89D2;&#x8272;&#xFF08;&#x6743;&#x9650;&#x7684;&#x96C6;&#x5408;&#xFF09;<ul>
+<li>Role&#xFF1A;&#x6388;&#x6743;&#x7279;&#x5B9A;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;</li>
+<li>ClusterRole&#xFF1A;&#x6388;&#x6743;&#x6240;&#x6709;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;</li>
+</ul>
+</li>
+<li>&#x89D2;&#x8272;&#x7ED1;&#x5B9A;<ul>
+<li>RoleBinding&#xFF1A;&#x5C06;&#x89D2;&#x8272;&#x7ED1;&#x5B9A;&#x5230;&#x4E3B;&#x4F53;&#xFF08;&#x5373;subject&#xFF09; </li>
+<li>ClusterRoleBinding&#xFF1A;&#x5C06;&#x96C6;&#x7FA4;&#x89D2;&#x8272;&#x7ED1;&#x5B9A;&#x5230;&#x4E3B;&#x4F53;</li>
+</ul>
+</li>
+<li>&#x4E3B;&#x4F53;&#xFF08;subject&#xFF09; <ul>
+<li>User&#xFF1A;&#x7528;&#x6237;</li>
+<li>Group&#xFF1A;&#x7528;&#x6237;&#x7EC4;</li>
+<li>ServiceAccount&#xFF1A;&#x670D;&#x52A1;&#x8D26;&#x53F7;</li>
+</ul>
+</li>
+</ul>
+<p>&#x793A;&#x4F8B;&#xFF1A;&#x4E3A;aliang&#x7528;&#x6237;&#x6388;&#x6743;default&#x547D;&#x540D;&#x7A7A;&#x95F4;Pod&#x8BFB;&#x53D6;&#x6743;&#x9650;</p>
+<ol>
+<li>&#x7528;K8S CA&#x7B7E;&#x53D1;&#x5BA2;&#x6237;&#x7AEF;&#x8BC1;&#x4E66;</li>
+</ol>
+<p>cfssl&#x5DE5;&#x5177;</p>
+<pre><code>cat cfssl.sh 
+wget https://pkg.cfssl.org/R1.2/cfssl_linux-amd64 
+wget https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64 
+wget https://pkg.cfssl.org/R1.2/cfssl-certinfo_linux-amd64 
+chmod +x cfssl_linux-amd64 cfssljson_linux-amd64 cfssl-certinfo_linux-amd64 
+mv cfssl_linux-amd64 /usr/local/bin/cfssl 
+mv cfssljson_linux-amd64 /usr/local/bin/cfssljson 
+mv cfssl-certinfo_linux-amd64 /usr/bin/cfssl-certinfo
+</code></pre><p>&#x521B;&#x5EFA;&#x8BC1;&#x4E66;</p>
+<pre><code>cat cert.sh 
+
+cat &gt; ca-config.json &lt;&lt;EOF
+{
+  &quot;signing&quot;: {
+    &quot;default&quot;: {
+      &quot;expiry&quot;: &quot;87600h&quot;
+    },
+    &quot;profiles&quot;: {
+      &quot;kubernetes&quot;: {
+        &quot;usages&quot;: [
+            &quot;signing&quot;,
+            &quot;key encipherment&quot;,
+            &quot;server auth&quot;,
+            &quot;client auth&quot;
+        ],
+        &quot;expiry&quot;: &quot;87600h&quot;
+      }
+    }
+  }
+}
+EOF
+
+cat &gt; aliang-csr.json &lt;&lt;EOF
+{
+  &quot;CN&quot;: &quot;aliang&quot;,
+  &quot;hosts&quot;: [],
+  &quot;key&quot;: {
+    &quot;algo&quot;: &quot;rsa&quot;,
+    &quot;size&quot;: 2048
+  },
+  &quot;names&quot;: [
+    {
+      &quot;C&quot;: &quot;CN&quot;,
+      &quot;ST&quot;: &quot;BeiJing&quot;,
+      &quot;L&quot;: &quot;BeiJing&quot;,
+      &quot;O&quot;: &quot;k8s&quot;,
+      &quot;OU&quot;: &quot;System&quot;
+    }
+  ]
+}
+EOF
+
+cfssl gencert -ca=/etc/kubernetes/pki/ca.crt -ca-key=/etc/kubernetes/pki/ca.key -config=ca-config.json -profile=kubernetes aliang-csr.json | cfssljson -bare aliang
+</code></pre><ol>
+<li>&#x751F;&#x6210;kubeconfig&#x6388;&#x6743;&#x6587;&#x4EF6;</li>
+</ol>
+<pre><code>cat config.sh 
+
+kubectl config set-cluster kubernetes \
+  --certificate-authority=/etc/kubernetes/pki/ca.crt \
+  --embed-certs=true \
+  --server=https://192.168.31.61:6443 \
+  --kubeconfig=aliang.kubeconfig
+
+# &#x8BBE;&#x7F6E;&#x5BA2;&#x6237;&#x7AEF;&#x8BA4;&#x8BC1;
+kubectl config set-credentials aliang \
+  --client-key=aliang-key.pem \
+  --client-certificate=aliang.pem \
+  --embed-certs=true \
+  --kubeconfig=aliang.kubeconfig
+
+# &#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x4E0A;&#x4E0B;&#x6587;
+kubectl config set-context kubernetes \
+  --cluster=kubernetes \
+  --user=aliang \
+  --kubeconfig=aliang.kubeconfig
+
+# &#x8BBE;&#x7F6E;&#x5F53;&#x524D;&#x4F7F;&#x7528;&#x914D;&#x7F6E;
+kubectl config use-context kubernetes --kubeconfig=aliang.kubeconfig
+</code></pre><ol>
+<li>&#x521B;&#x5EFA;RBAC&#x6743;&#x9650;&#x7B56;&#x7565;</li>
+</ol>
+<pre><code>cat rbac.yaml 
+kind: Role
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  namespace: default
+  name: pod-reader
+rules:
+- apiGroups: [&quot;&quot;]
+  resources: [&quot;pods&quot;,&quot;services&quot;,&quot;configmaps&quot;]
+  verbs: [&quot;get&quot;, &quot;watch&quot;, &quot;list&quot;]
+
+---
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: read-pods
+  namespace: default
+subjects:
+- kind: User
+  name: aliang
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: pod-reader
+  apiGroup: rbac.authorization.k8s.io
+
+kubectl create -f rbac.yaml
+kubectl get role
+&#x9A8C;&#x8BC1;
+kubectl get --kubeconfig=./aliang.kubeconfig pods
+kubectl get --kubeconfig=./aliang.kubeconfig svc
+kubectl get --kubeconfig=./aliang.kubeconfig cm
+</code></pre><p>&#x7528;ServiceAccount&#x6388;&#x6743;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x5C31;&#x662F;TOKEN&#x8BA4;&#x8BC1;</p>
+<pre><code>cat sa.yaml 
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: pod-reader
+  namespace: default
+
+---
+
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: sa-read-pods
+  namespace: default
+subjects:
+- kind: ServiceAccount
+  name: pod-reader
+roleRef:
+  kind: Role
+  name: pod-reader
+  apiGroup: rbac.authorization.k8s.io
+
+kubectl create -f sa.yaml
+kubectl get sa
+</code></pre><p>token&#x5728;&#x8FD9;&#x91CC;&#x67E5;&#x770B;</p>
+<pre><code>kubectl get secret
+pod-reader-token-ndwk8               kubernetes.io/service-account-token   3      107s
+kubectl describe secret pod-reader-token-ndwk8
+</code></pre><p>&#x7528;token&#x767B;&#x5F55;UI</p>
+<p><a href="https://kubernetes.io/docs/reference/access-authn-authz/rbac/" target="_blank">https://kubernetes.io/docs/reference/access-authn-authz/rbac/</a> </p>
+<footer class="page-footer"><span class="copyright">FROM liqianlong all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-03-27 13:08:22
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="k8s_rumen.html" class="navigation navigation-prev " aria-label="Previous page: k8s入门">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../problem/" class="navigation navigation-next " aria-label="Next page: 问题总结">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"k8s进阶","level":"2.1.5","depth":2,"next":{"title":"问题总结","level":"2.2","depth":1,"path":"problem/README.md","ref":"./problem/README.md","articles":[{"title":"苹果掉单通知","level":"2.2.1","depth":2,"path":"problem/apple_drop_notice.md","ref":"./problem/apple_drop_notice.md","articles":[]}]},"previous":{"title":"k8s入门","level":"2.1.4","depth":2,"path":"k8s/k8s_rumen.md","ref":"./k8s/k8s_rumen.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","highlight","search","tbfed-pagefooter","anchor-navigation-ex","-hide-element","copy-code-button","3-ba","favicon"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"FROM liqianlong","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"./gitbook/images/favicon.ico","bookmark":"./gitbook/images/favicon.ico","appleTouch":"./gitbook/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./gitbook/images/apple-touch-icon.jpg","180x180":"./gitbook/images/apple-touch-icon.jpg"}},"3-ba":{"configuration":"auto","token":"a966d180803ca8cd07c967d6fdfb8d3f"},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"liqianlong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"liqianlong's book","language":"zh-hans","gitbook":"3.2.3","description":"linux python"},"file":{"path":"k8s/k8s_jinjie.md","mtime":"2021-03-27T05:08:22.845Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-27T05:09:10.118Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

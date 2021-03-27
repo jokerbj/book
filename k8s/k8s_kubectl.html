@@ -1,0 +1,690 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>kubectl命令行 · liqianlong's book</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="liqianlong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="k8s_rumen.html" />
+    
+    
+    <link rel="prev" href="k8s_jieshao_deploy.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../gitbook/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../gitbook/images/favicon.ico' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../gitbook/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../gitbook/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../gitbook/images/apple-touch-icon.jpg">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本书
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Kubernetes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="docker_install_use.html">
+            
+                <a href="docker_install_use.html">
+            
+                    
+                    docker安装使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="k8s_jieshao_deploy.html">
+            
+                <a href="k8s_jieshao_deploy.html">
+            
+                    
+                    k8s介绍部署
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.3" data-path="k8s_kubectl.html">
+            
+                <a href="k8s_kubectl.html">
+            
+                    
+                    kubectl命令行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="k8s_rumen.html">
+            
+                <a href="k8s_rumen.html">
+            
+                    
+                    k8s入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="k8s_jinjie.html">
+            
+                <a href="k8s_jinjie.html">
+            
+                    
+                    k8s进阶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../problem/">
+            
+                <a href="../problem/">
+            
+                    
+                    问题总结
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../problem/apple_drop_notice.html">
+            
+                <a href="../problem/apple_drop_notice.html">
+            
+                    
+                    苹果掉单通知
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../soft/">
+            
+                <a href="../soft/">
+            
+                    
+                    软件使用说明
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../soft/get_baidutongji_report.html">
+            
+                <a href="../soft/get_baidutongji_report.html">
+            
+                    
+                    获取百度统计报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../soft/sublime_install_use.html">
+            
+                <a href="../soft/sublime_install_use.html">
+            
+                    
+                    sublime安装使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.3" data-path="../soft/postman_install_use.html">
+            
+                <a href="../soft/postman_install_use.html">
+            
+                    
+                    postman安装使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.4" data-path="../soft/management_time.html">
+            
+                <a href="../soft/management_time.html">
+            
+                    
+                    时间管理方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >kubectl命令行</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#kubectl-&#x547D;&#x4EE4;&#x884C;&#x7BA1;&#x7406;&#x5DE5;&#x5177;"><b>1. </b>kubectl &#x547D;&#x4EE4;&#x884C;&#x7BA1;&#x7406;&#x5DE5;&#x5177;</a></li><ul><li><span class="title-icon "></span><a href="#kubectl-&#x6307;&#x4EE4;&#x8BF4;&#x660E;"><b>1.1. </b>kubectl &#x6307;&#x4EE4;&#x8BF4;&#x660E;</a></li><li><span class="title-icon "></span><a href="#&#x7B80;&#x5355;&#x53C2;&#x8003;"><b>1.2. </b>&#x7B80;&#x5355;&#x53C2;&#x8003;</a></li><li><span class="title-icon "></span><a href="#k8s&#x5E94;&#x7528;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF08;&#x9488;&#x5BF9;pod&#xFF09;"><b>1.3. </b>k8s&#x5E94;&#x7528;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF08;&#x9488;&#x5BF9;Pod&#xFF09;</a></li></ul></ul></div><a href="#kubectl-&#x547D;&#x4EE4;&#x884C;&#x7BA1;&#x7406;&#x5DE5;&#x5177;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="kubectl-&#x547D;&#x4EE4;&#x884C;&#x7BA1;&#x7406;&#x5DE5;&#x5177;"><a name="kubectl-&#x547D;&#x4EE4;&#x884C;&#x7BA1;&#x7406;&#x5DE5;&#x5177;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x547D;&#x4EE4;&#x884C;&#x7BA1;&#x7406;&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>1. kubectl &#x547D;&#x4EE4;&#x884C;&#x7BA1;&#x7406;&#x5DE5;&#x5177;</h1>
+<h2 id="kubectl-&#x6307;&#x4EE4;&#x8BF4;&#x660E;"><a name="kubectl-&#x6307;&#x4EE4;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#kubectl-&#x6307;&#x4EE4;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. kubectl &#x6307;&#x4EE4;&#x8BF4;&#x660E;</h2>
+<table border="" cellpadding="" cellspacing="">
+        <tr>
+            <td align="center">&#x7C7B;&#x578B;</td>
+            <td align="center">&#x6307;&#x4EE4;</td>
+            <td align="center">&#x8BF4;&#x660E;</td>
+        </tr>
+        <tr>
+            <td rowspan="8">&#x57FA;&#x7840;&#x547D;&#x4EE4;</td>
+            <td>create</td>
+            <td>&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x540D;&#x6216;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x521B;&#x5EFA;&#x8D44;&#x6E90;</td>
+        </tr>
+            <td>expose</td>
+            <td>&#x5C06;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;&#x516C;&#x5F00;&#x4E3A;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Service</td>
+        
+        <tr>
+            <td>run</td>
+            <td>&#x5728;&#x96C6;&#x7FA4;&#x4E2D;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x955C;&#x50CF;</td>
+        </tr>
+        <tr>
+            <td>set</td>
+            <td>&#x5728;&#x5BF9;&#x8C61;&#x4E0A;&#x8BBE;&#x7F6E;&#x7279;&#x5B9A;&#x7684;&#x529F;&#x80FD;</td>
+        </tr>
+        <tr>
+            <td>get</td>
+            <td>&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x8D44;&#x6E90;</td>
+        </tr>
+        <tr>
+            <td>explain</td>
+            <td>&#x6587;&#x6863;&#x53C2;&#x8003;&#x8D44;&#x6599;</td>
+        </tr>
+        <tr>
+            <td>edit</td>
+            <td>&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x7F16;&#x8F91;&#x5668;&#x7F16;&#x8F91;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;</td>
+        </tr>
+        <tr>
+            <td>delete</td>
+            <td>&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x540D;&#x3001;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x3001;&#x8D44;&#x6E90;&#x540D;&#x79F0;&#x6216;&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;&#x6765;&#x5220;&#x9664;&#x8D44;&#x6E90;</td>
+        </tr>
+        <tr>
+            <td rowspan="4">&#x90E8;&#x7F72;&#x547D;&#x4EE4;</td>
+            <td>rollout</td>
+            <td>&#x7BA1;&#x7406;&#x8D44;&#x6E90;&#x7684;&#x53D1;&#x5E03;</td>
+        </tr>
+         <tr>
+            <td>rolling-update</td>
+            <td>&#x5BF9;&#x7ED9;&#x5B9A;&#x7684;&#x590D;&#x5236;&#x63A7;&#x5236;&#x5668;&#x6EDA;&#x52A8;&#x66F4;&#x65B0;</td>
+        </tr>
+         <tr>
+            <td>scale</td>
+            <td>&#x6269;&#x5BB9;&#x6216;&#x7F29;&#x5BB9;Pod&#x6570;&#x91CF;&#xFF0C;Deployment&#x3001;ReplicaSet&#x3001;RC&#x6216;Job</td>
+        </tr>
+        <tr>
+            <td>autoscale</td>
+            <td>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x9009;&#x62E9;&#x6269;&#x5BB9;&#x6216;&#x7F29;&#x5BB9;&#x5E76;&#x8BBE;&#x7F6E;Pod&#x6570;&#x91CF;</td>
+        </tr>
+        <tr>
+            <td rowspan="7">&#x96C6;&#x7FA4;&#x7BA1;&#x7406;&#x547D;&#x4EE4;</td>
+            <td>certificate</td>
+            <td>&#x4FEE;&#x6539;&#x8BC1;&#x4E66;&#x8D44;&#x6E90;</td>
+        </tr>
+        <tr>
+            <td>cluster-info</td>
+            <td>&#x663E;&#x793A;&#x96C6;&#x7FA4;&#x4FE1;&#x606F;</td>
+        </tr>
+        <tr>
+            <td>top</td>
+            <td>&#x663E;&#x793A;&#x8D44;&#x6E90;&#xFF08;CPU/Memory/Storage&#xFF09;&#x4F7F;&#x7528;&#x3002;&#x9700;&#x8981;Heapster&#x8FD0;&#x884C;</td>
+        </tr>
+        <tr>
+            <td>cordon</td>
+            <td>&#x6807;&#x8BB0;&#x8282;&#x70B9;&#x4E0D;&#x53EF;&#x8C03;&#x5EA6;</td>
+        </tr>
+        <tr>
+            <td>uncordon</td>
+            <td>&#x6807;&#x8BB0;&#x8282;&#x70B9;&#x53EF;&#x8C03;&#x5EA6;</td>
+        </tr>
+        <tr>
+            <td>drain</td>
+            <td>&#x9A71;&#x9010;&#x8282;&#x70B9;&#x4E0A;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x51C6;&#x5907;&#x4E0B;&#x7EBF;&#x7EF4;&#x62A4;</td>
+        </tr>
+        <tr>
+            <td>taint</td>
+            <td>&#x4FEE;&#x6539;&#x8282;&#x70B9;taint&#x6807;&#x8BB0;</td>
+        </tr>
+        <tr>
+            <td rowspan="8">&#x6545;&#x969C;&#x8BCA;&#x65AD;&#x548C;&#x8C03;&#x8BD5;</td>
+            <td>describe</td>
+            <td>&#x663E;&#x793A;&#x7279;&#x5B9A;&#x8D44;&#x6E90;&#x6216;&#x8D44;&#x6E90;&#x7EC4;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td>
+        </tr>
+        <tr>
+            <td>logs</td>
+            <td>&#x5728;&#x4E00;&#x4E2A;Pod&#x4E2D;&#x6253;&#x5370;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x65E5;&#x5FD7;&#x3002;&#x5982;&#x679C;Pod&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#xFF0C;&#x5BB9;&#x5668;&#x540D;&#x79F0;&#x662F;&#x53EF;&#x9009;&#x7684;</td>
+        </tr>
+        <tr>
+            <td>attach</td>
+            <td>&#x9644;&#x52A0;&#x5230;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;</td>
+        </tr>
+        <tr>
+            <td>exec</td>
+            <td>&#x6267;&#x884C;&#x547D;&#x4EE4;&#x5230;&#x5BB9;&#x5668;</td>
+        </tr>
+        <tr>
+            <td>port-forward</td>
+            <td>&#x8F6C;&#x53D1;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x672C;&#x5730;&#x7AEF;&#x53E3;&#x5230;&#x4E00;&#x4E2A;pod</td>
+        </tr>
+        <tr>
+            <td>proxy</td>
+            <td>&#x8FD0;&#x884C;&#x4E00;&#x4E2A;proxy&#x5230;Kubernetes API server</td>
+        </tr>
+        <tr>
+            <td>cp</td>
+            <td>&#x62F7;&#x8D1D;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;&#x5230;&#x5BB9;&#x5668;&#x4E2D;</td>
+        </tr>
+        <tr>
+            <td>auth</td>
+            <td>&#x68C0;&#x67E5;&#x6388;&#x6743;</td>
+        </tr>
+        <tr>
+            <td rowspan="4">&#x9AD8;&#x7EA7;&#x547D;&#x4EE4;</td>
+            <td>apply</td>
+            <td>&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x540D;&#x6216;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x5BF9;&#x8D44;&#x6E90;&#x5E94;&#x7528;&#x914D;&#x7F6E;</td>
+        </tr>
+        <tr>
+            <td>patch</td>
+            <td>&#x4F7F;&#x7528;&#x8865;&#x4E01;&#x4FEE;&#x6539;&#x3001;&#x66F4;&#x65B0;&#x8D44;&#x6E90;&#x7684;&#x5B57;&#x6BB5;</td>
+        </tr>
+        <tr>
+            <td>replace</td>
+            <td>&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x540D;&#x6216;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x66FF;&#x6362;&#x4E00;&#x4E2A;&#x8D44;&#x6E90;</td>
+        </tr>
+        <tr>
+            <td>convert</td>
+            <td>&#x4E0D;&#x540C;&#x7684;API&#x7248;&#x672C;&#x4E4B;&#x95F4;&#x8F6C;&#x6362;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</td>
+        </tr>
+        <tr>
+            <td rowspan="3">&#x8BBE;&#x7F6E;&#x547D;&#x4EE4;</td>
+            <td>label</td>
+            <td>&#x66F4;&#x65B0;&#x8D44;&#x6E90;&#x4E0A;&#x7684;&#x6807;&#x7B7E;</td>
+        </tr>
+        <tr>
+            <td>annotate</td>
+            <td>&#x66F4;&#x65B0;&#x8D44;&#x6E90;&#x4E0A;&#x7684;&#x6CE8;&#x91CA;</td>
+        </tr>
+        <tr>
+            <td>completion</td>
+            <td>&#x7528;&#x4E8E;&#x5B9E;&#x73B0;kubectl&#x5DE5;&#x5177;&#x81EA;&#x52A8;&#x8865;&#x5168;</td>
+        </tr>
+         <tr>
+            <td rowspan="5">&#x8BBE;&#x7F6E;&#x547D;&#x4EE4;</td>
+            <td>api-versions</td>
+            <td>&#x6253;&#x5370;&#x53D7;&#x652F;&#x6301;&#x7684;API&#x7248;&#x672C;</td>
+        </tr>
+        <tr>
+            <td>config</td>
+            <td>&#x4FEE;&#x6539;kubeconfig&#x6587;&#x4EF6;&#xFF08;&#x7528;&#x4E8E;&#x8BBF;&#x95EE;API&#xFF0C;&#x6BD4;&#x5982;&#x914D;&#x7F6E;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#xFF09;</td>
+        </tr>
+        <tr>
+        <td>help</td>
+            <td>&#x6240;&#x6709;&#x547D;&#x4EE4;&#x5E2E;&#x52A9;</td>
+        </tr>
+          <tr>
+            <td>plugin</td>
+            <td>&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#x63D2;&#x4EF6;</td>
+        </tr>
+        <tr>
+            <td>version</td>
+            <td>&#x6253;&#x5370;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x7248;&#x672C;&#x4FE1;&#x606F;</td>
+        </tr>
+</table>
+
+
+<h2 id="&#x7B80;&#x5355;&#x53C2;&#x8003;"><a name="&#x7B80;&#x5355;&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x5355;&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x7B80;&#x5355;&#x53C2;&#x8003;</h2>
+<pre><code class="lang-bash">&#x5E2E;&#x52A9;
+kubectl create --help
+kubectl get all  &#x5F53;&#x524D;&#x547D;&#x540D;&#x7A7A;&#x95F4;
+kubectl get all -A
+kubectl api-resources &#x7F29;&#x5199;
+kubectl get cs/no/cm/ep/ns/pvc/po/sa/svc/
+
+&#x57FA;&#x7840;&#x547D;&#x4EE4;
+1. &#x67E5;&#x770B;
+kubectl get ns
+kubectl get pods -n kube-system
+2. &#x7F16;&#x8F91;
+kubectl edit deploy nginx
+3. &#x5220;&#x9664;
+kubectl delete deploy nginx
+
+&#x547D;&#x4EE4;&#x8865;&#x5168;&#xFF0C;&#x53EF;&#x4EE5;&#x8DDF;kubectl completion&#x5B98;&#x65B9;&#x8BF4;&#x660E;&#x5BF9;&#x7167;&#x4E0B;
+yum install -y bash-completion
+<span class="hljs-built_in">source</span> /usr/share/bash-completion/bash_completion
+<span class="hljs-built_in">source</span> &lt;(kubectl completion bash)
+
+&#x914D;&#x7F6E;&#x6587;&#x4EF6;
+kubectl config view
+ls .kube/config
+</code></pre>
+<h2 id="k8s&#x5E94;&#x7528;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF08;&#x9488;&#x5BF9;pod&#xFF09;"><a name="k8s&#x5E94;&#x7528;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF08;&#x9488;&#x5BF9;pod&#xFF09;" class="anchor-navigation-ex-anchor" href="#k8s&#x5E94;&#x7528;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF08;&#x9488;&#x5BF9;pod&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. k8s&#x5E94;&#x7528;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF08;&#x9488;&#x5BF9;Pod&#xFF09;</h2>
+<blockquote>
+<p>&#x521B;&#x5EFA;</p>
+</blockquote>
+<pre><code class="lang-bash">kubectl create deployment nginx --image=nginx:1.14
+kubectl get deploy,pods
+</code></pre>
+<blockquote>
+<p>&#x53D1;&#x5E03;</p>
+</blockquote>
+<pre><code class="lang-bash">kubectl expose deployment nginx --port=80 --type=NodePort --target-port=80 --name=nginx-service
+kubectl get service,svc
+</code></pre>
+<blockquote>
+<p>&#x66F4;&#x65B0;</p>
+</blockquote>
+<pre><code class="lang-bash">kubectl <span class="hljs-built_in">set</span> image deployment nginx nginx=nginx:1.15
+</code></pre>
+<blockquote>
+<p>&#x56DE;&#x6EDA;</p>
+</blockquote>
+<pre><code class="lang-bash">kubectl rollout <span class="hljs-built_in">history</span> deployment nginx
+kubectl rollout undo deployment nginx
+</code></pre>
+<blockquote>
+<p>&#x5220;&#x9664;</p>
+</blockquote>
+<pre><code class="lang-bash">kubectl delete deploy/nginx
+kubectl delete svc nginx-service
+</code></pre>
+<footer class="page-footer"><span class="copyright">FROM liqianlong all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-03-27 13:08:22
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="k8s_jieshao_deploy.html" class="navigation navigation-prev " aria-label="Previous page: k8s介绍部署">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="k8s_rumen.html" class="navigation navigation-next " aria-label="Next page: k8s入门">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"kubectl命令行","level":"2.1.3","depth":2,"next":{"title":"k8s入门","level":"2.1.4","depth":2,"path":"k8s/k8s_rumen.md","ref":"./k8s/k8s_rumen.md","articles":[]},"previous":{"title":"k8s介绍部署","level":"2.1.2","depth":2,"path":"k8s/k8s_jieshao_deploy.md","ref":"./k8s/k8s_jieshao_deploy.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","highlight","search","tbfed-pagefooter","anchor-navigation-ex","-hide-element","copy-code-button","3-ba","favicon"],"styles":{"website":"styles/website.css","ebook":"styles/ebook.css","pdf":"styles/pdf.css","mobi":"styles/mobi.css","epub":"styles/epub.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"FROM liqianlong","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"family":"sans","size":2,"theme":"white"},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"favicon":{"shortcut":"./gitbook/images/favicon.ico","bookmark":"./gitbook/images/favicon.ico","appleTouch":"./gitbook/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./gitbook/images/apple-touch-icon.jpg","180x180":"./gitbook/images/apple-touch-icon.jpg"}},"3-ba":{"configuration":"auto","token":"a966d180803ca8cd07c967d6fdfb8d3f"},"copy-code-button":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"liqianlong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"liqianlong's book","language":"zh-hans","gitbook":"3.2.3","description":"linux python"},"file":{"path":"k8s/k8s_kubectl.md","mtime":"2021-03-27T05:08:22.845Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-27T05:09:10.118Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-3-ba/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
